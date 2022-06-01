@@ -1,0 +1,9 @@
+theme = "everforest_dark"
+
+[editor]
+auto-pairs = true
+
+[editor.cursor-shape]
+insert = "bar"
+# normal = "block"
+# select = "underline"

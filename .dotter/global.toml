@@ -1,0 +1,11 @@
+# on windows: mklink /d %userprofile%\.config %appdata%
+[default.files]
+# https://github.com/SuperCuber/dotter/wiki/Setup-and-Configuration#complex-target
+# ".vimrc" = "~/.vimrc"
+".vimrc" = { target = "~/.vimrc", type = "symbolic" }
+
+".config/bat/config" = "~/.config/bat/config"
+".config/bottom/bottom.toml" = "~/.config/bottom/bottom.toml"
+".config/helix" = "~/.config/helix"
+".config/pet/snippet.toml" = "~/.config/pet/snippet.toml"
+".config/rhq/config.toml" = "~/.config/rhq/config.toml"

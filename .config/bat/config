@@ -1,0 +1,2 @@
+--map-syntax="justfile:Makefile"
+--map-syntax=".justfile:Makefile"

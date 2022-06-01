@@ -1,0 +1,24 @@
+[[language]]
+name = "rust"
+
+# default setting:
+# auto-format = true
+# indent = { tab-width = 4, unit = "    " }
+auto-format = false
+# indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "markdown"
+# on default:
+# indent = { tab-width = 2, unit = "  " }
+# ...markdown list indents are 4space, no?
+indent = { tab-width = 4, unit = "\t" }
+
+[language.auto-pairs]
+# Remove '`'
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'<' = '>'
+
