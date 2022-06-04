@@ -9,3 +9,4 @@
 ".config/helix" = "~/.config/helix"
 ".config/pet/snippet.toml" = "~/.config/pet/snippet.toml"
 ".config/rhq/config.toml" = "~/.config/rhq/config.toml"
+".config/gitui" = "~/.config/gitui"
