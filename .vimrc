@@ -212,9 +212,9 @@ let g:winresizer_start_key = '<Space>e'
 " recipe initialize
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 " To insert single quote by `si`
-let g:sandwich#recipes += [{'buns': ['''', ''''], 'input': ['si'],  'quoteescape': 1, 'expand_range': 0, 'linewise': 0, 'nesting': 0}]
+let g:sandwich#recipes += [{'buns': ['''', ''''], 'input': ['si'],  'quoteescape': 1}]
 " markdown link
-let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['md'],  'quoteescape': 1, 'expand_range': 0, 'linewise': 0, 'nesting': 0}]
+let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['md'],  'quoteescape': 1}]
 
 " 日本語文章用（どのぐらい使うのかわからないけど一応）
 let g:sandwich#recipes += [{'buns': ['（', '）'], 'input': ['mr']}] " fullwidth maru
@@ -364,6 +364,7 @@ colorscheme everforest
 " Todo "{{{
 " - migrate to kana/vim-textobj-line
 " - install lsp plugins
+" - learn about filetype options
  "}}}
 
 " Scouter: https://vim-jp.org/vim-users-jp/2009/07/10/Hack-39.html "{{{
