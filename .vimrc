@@ -83,6 +83,7 @@ noremap <Space>p "*p
 nnoremap ]<Space> :<C-u>call append(expand('.'), '')<CR>
  "}}}
 
+nnoremap <Space> <Nop>
 nnoremap <Space><CR> <Cmd>call append(expand('.'), '')<CR>
 nnoremap <Space>s <C-v>
 nnoremap <Space>ac <Cmd>%y *<CR>
