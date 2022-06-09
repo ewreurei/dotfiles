@@ -54,7 +54,7 @@ set noshowmode
 "---------------------------------------
 " let g:mapleader = ',' "{{{
 " Reload vimrc: https://vim-jp.org/vim-users-jp/2009/09/18/Hack-74.html
-nnoremap <silent> <Space>rr :<C-u>source $MYVIMRC<CR>
+nnoremap <silent> <Space>rr <Cmd>source $MYVIMRC<CR><Cmd>nohlsearch<CR>
 
 " For more scrolling on K,J "{{{
 nnoremap gk H
