@@ -248,9 +248,11 @@ call lexima#add_rule({'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_a
 call lexima#add_rule({'char': '（', 'input_after': '）'})
 call lexima#add_rule({'char': '）', 'at': '\%#）', 'leave': 1})
 call lexima#add_rule({'char': '<BS>', 'at': '（\%#）', 'delete': 1})
+call lexima#add_rule({'char': '「', 'input_after': '」'})
+call lexima#add_rule({'char': '」', 'at': '\%#」', 'leave': 1})
+call lexima#add_rule({'char': '<BS>', 'at': '「\%#」', 'delete': 1})
 
-" experimental (problem: if use second line, can't put `<<>>` easily so have to use dot-repeat)
-call lexima#add_rule({'char': '「', 'at': '「\%#', 'input': '<BS>「', 'input_after': '」'})
+" experimental (problem: if use first line, can't put `<<>>` easily so have to use dot-repeat)
 " call lexima#add_rule({'char': '<', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'})
 " call lexima#add_rule({'char': '>', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'})
  "}}}
