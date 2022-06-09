@@ -236,10 +236,12 @@ let g:lightline = {
 call lexima#add_rule({'char': '<', 'input_after': '>'})
 call lexima#add_rule({'char': '>', 'at': '\%#>', 'leave': 1})
 call lexima#add_rule({'char': '<BS>', 'at': '<\%#>', 'delete': 1})
-" single quote is still not easy to type for me, so just in case mapping
+" single quote is still not easy to type for me (in JIS keyboard), so just in case mapping
 call lexima#add_rule({'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': ''''})
 " Note: `'leave': 1` doesn't work as expected, so ignored `:h lexima-repeatable-rule`
 call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><Right>'})
+" markdown link by 'mdl'
+call lexima#add_rule({'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'})
 
 " Full width
 call lexima#add_rule({'char': '（', 'input_after': '）'})
