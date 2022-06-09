@@ -10,3 +10,5 @@
 ".config/pet/snippet.toml" = "~/.config/pet/snippet.toml"
 ".config/rhq/config.toml" = "~/.config/rhq/config.toml"
 ".config/gitui" = "~/.config/gitui"
+".config/espanso/config" = "~/.config/espanso/config"
+".config/espanso/match/base.yml" = { target = "~/.config/espanso/match/base.yml", type = "symbolic" }
