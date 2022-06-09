@@ -190,6 +190,7 @@ Jetpack 'machakann/vim-highlightedyank'
 Jetpack 'kana/vim-operator-user'
 Jetpack 'kana/vim-operator-replace'
 Jetpack 'kana/vim-textobj-user'
+Jetpack 'romainl/vim-cool'
 call jetpack#end()
  "}}}
 
