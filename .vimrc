@@ -94,7 +94,7 @@ noremap Y y$
 nnoremap <C-r> R
 " nnoremap R <Nop>
 " That is hard to type but can use `dh` or `hx` instead, so
-nnoremap X "_x 
+nnoremap X "_x
 
 " nohlsearch for now matching
 nnoremap <Esc><Esc> <Cmd>nohlsearch<CR>
@@ -284,7 +284,7 @@ let g:openbrowser_search_engines = {
   \ 'ghrepo': 'https://github.com/{query}'
   \ }
 " open github repo (user/name)
-nmap sp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR> 
+nmap sp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR>
 
 " highlighted put
 nmap p <Plug>(highlightedput-p)
