@@ -191,6 +191,7 @@ Jetpack 'kana/vim-operator-user'
 Jetpack 'kana/vim-operator-replace'
 Jetpack 'kana/vim-textobj-user'
 Jetpack 'romainl/vim-cool'
+Jetpack 'ntpeters/vim-better-whitespace'
 call jetpack#end()
  "}}}
 
