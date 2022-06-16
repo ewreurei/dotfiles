@@ -268,6 +268,7 @@ let g:clever_f_use_migemo = 1
 let g:clever_f_chars_match_any_signs = ';'
 let g:clever_f_timeout_ms = 2000
 let g:clever_f_highlight_timeout_ms = 750 " if setted above, mustly
+let g:clever_f_fix_key_direction = 1
 
 " open-browser
 nmap gx <Plug>(openbrowser-smart-search)
