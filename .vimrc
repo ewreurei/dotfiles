@@ -192,6 +192,7 @@ Jetpack 'kana/vim-operator-replace'
 Jetpack 'kana/vim-textobj-user'
 Jetpack 'romainl/vim-cool'
 Jetpack 'ntpeters/vim-better-whitespace'
+Jetpack 'haya14busa/vim-asterisk'
 call jetpack#end()
  "}}}
 
@@ -337,6 +338,13 @@ call textobj#user#plugin('repositoriename', {
   \   'select': ['ar', 'ir'],
   \   },
   \ })
+
+" vim-asterisk
+map *  <Plug>(asterisk-z*)
+map #  <Plug>(asterisk-z#)
+map g* <Plug>(asterisk-gz*)
+map g# <Plug>(asterisk-gz#)
+let g:asterisk#keeppos = 1
  "}}}
 
 "---------------------------------------
