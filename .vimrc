@@ -136,6 +136,7 @@ vnoremap <C-j> :move '>+1<CR>gv
 vnoremap <C-k> :move '<-2<CR>gv
 " avoid accidental
 vnoremap J <Nop>
+vnoremap K <Nop>
 
 " old, this approach dirtied unnamed register, see `:h quote_quote` "{{{
 " https://qiita.com/itmammoth/items/312246b4b7688875d023
