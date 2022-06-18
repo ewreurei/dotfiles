@@ -22,6 +22,7 @@ set nowrap
 set foldmethod=marker
 set shortmess-=S
 " set visualbell
+set hidden
 
 set ignorecase
 set smartcase
@@ -140,6 +141,14 @@ vnoremap J <Nop>
 " https://qiita.com/itmammoth/items/312246b4b7688875d023
 " nnoremap <C-k> "zdd<Up>"zP
 " nnoremap <C-j> "zdd"zp "}}}
+
+" buffer using
+nnoremap gn <Cmd>bnext<CR>
+nnoremap gp <Cmd>bprevious<CR>
+nnoremap <Space>d <Cmd>bdelete<CR>
+" (Escaping)
+nnoremap <Space>n gn
+nnoremap <Space>N gN
 
 " Escaping (not much used)
 nnoremap <Up> gk
