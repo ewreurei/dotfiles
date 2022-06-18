@@ -250,6 +250,9 @@ let g:lightline = {
 call lexima#add_rule({'char': '<', 'input_after': '>'})
 call lexima#add_rule({'char': '>', 'at': '\%#>', 'leave': 1})
 call lexima#add_rule({'char': '<BS>', 'at': '<\%#>', 'delete': 1})
+" When writing specific language, disable that rule
+call lexima#add_rule({'char': '<', 'filetype': 'haskell'})
+
 " single quote is still not easy to type for me (in JIS keyboard), so just in case mapping
 call lexima#add_rule({'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': ''''})
 " Note: `'leave': 1` doesn't work as expected, so ignored `:h lexima-repeatable-rule`
