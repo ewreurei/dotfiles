@@ -88,6 +88,7 @@ nnoremap <Space> <Nop>
 nnoremap <Space><CR> <Cmd>call append(expand('.'), '')<CR>
 nnoremap <Space>s <C-v>
 nnoremap <Space>ac <Cmd>%y *<CR>
+nnoremap <Space>as GVgg
 nnoremap + <C-a>
 nnoremap - <C-x>
 noremap Y y$
