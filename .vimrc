@@ -204,6 +204,8 @@ Jetpack 'kana/vim-textobj-user'
 Jetpack 'romainl/vim-cool'
 Jetpack 'ntpeters/vim-better-whitespace'
 Jetpack 'haya14busa/vim-asterisk'
+Jetpack 'vim-denops/denops.vim'
+Jetpack 'gamoutatsumi/dps-ghosttext.vim'
 call jetpack#end()
  "}}}
 
