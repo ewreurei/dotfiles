@@ -258,8 +258,8 @@ call lexima#add_rule({'char': '<', 'filetype': 'haskell'})
 
 " single quote is still not easy to type for me (in JIS keyboard), so just in case mapping
 call lexima#add_rule({'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': ''''})
-" Note: `'leave': 1` doesn't work as expected, so ignored `:h lexima-repeatable-rule`
-call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><Right>'})
+" Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
+call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'})
 " markdown link by 'mdl'
 call lexima#add_rule({'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'})
 
