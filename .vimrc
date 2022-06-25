@@ -146,7 +146,6 @@ vnoremap K <Nop>
 " nnoremap <C-k> "zdd<Up>"zP
 " nnoremap <C-j> "zdd"zp "}}}
 
-
 " Escaping
 nnoremap <Up> gk
 nnoremap <Down> gj
