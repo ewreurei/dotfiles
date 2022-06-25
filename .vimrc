@@ -80,6 +80,8 @@ nnoremap U <C-r>
 nnoremap <Space>w <C-w>
 noremap <Space>y "*y
 noremap <Space>p "*p
+nnoremap gn <Cmd>bnext<CR>
+nnoremap gp <Cmd>bprevious<CR>
 " https://vim-jp.org/vim-users-jp/2009/08/15/Hack-57.html
 nnoremap ]<Space> :<C-u>call append(expand('.'), '')<CR>
  "}}}
@@ -144,17 +146,12 @@ vnoremap K <Nop>
 " nnoremap <C-k> "zdd<Up>"zP
 " nnoremap <C-j> "zdd"zp "}}}
 
-" buffer using
-nnoremap gn <Cmd>bnext<CR>
-nnoremap gp <Cmd>bprevious<CR>
-nnoremap <Space>d <Cmd>bdelete<CR>
-" (Escaping)
-nnoremap <Space>n gn
-nnoremap <Space>N gN
 
-" Escaping (not much used)
+" Escaping
 nnoremap <Up> gk
 nnoremap <Down> gj
+nnoremap <Space>n gn
+nnoremap <Space>N gN
 
 " Todo: 折り畳みについていつか詳しく調べる
 " ごまかしマッピング:
