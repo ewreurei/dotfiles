@@ -91,14 +91,20 @@ nnoremap <Space><CR> <Cmd>call append(expand('.'), '')<CR>
 nnoremap <Space>s <C-v>
 nnoremap <Space>ac <Cmd>%y *<CR>
 nnoremap <Space>as GVgg
-nnoremap + <C-a>
-nnoremap - <C-x>
+noremap + <C-a>
+noremap - <C-x>
 noremap Y y$
+nmap yp yyp
+nnoremap <Space>l <Cmd>bnext<CR>
+nnoremap <Space>h <Cmd>bprevious<CR>
 " for operator-replace
 nnoremap <C-r> R
 " nnoremap R <Nop>
 " That is hard to type but can use `dh` or `hx` instead, so
 nnoremap X "_x
+
+vnoremap g+ g<C-a>
+vnoremap g- g<C-x>
 
 " nohlsearch for now matching
 nnoremap <Esc><Esc> <Cmd>nohlsearch<CR>
@@ -151,6 +157,9 @@ nnoremap <Up> gk
 nnoremap <Down> gj
 nnoremap <Space>n gn
 nnoremap <Space>N gN
+
+" Commands
+command! Vimrc edit $MYVIMRC
 
 " Todo: 折り畳みについていつか詳しく調べる
 " ごまかしマッピング:
