@@ -220,7 +220,7 @@ let g:winresizer_start_key = '<Space>e'
 
 " sandwich "{{{
 " :help operator-sandwich
-" call operator#sandwich#set('delete', 'all', 'hi_duration', 100)
+call operator#sandwich#set('delete', 'all', 'hi_duration', 175)
 
 " recipe initialize
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
