@@ -211,6 +211,7 @@ Jetpack 'ntpeters/vim-better-whitespace'
 Jetpack 'haya14busa/vim-asterisk'
 Jetpack 'vim-denops/denops.vim'
 Jetpack 'gamoutatsumi/dps-ghosttext.vim'
+" Jetpack 'unblevable/quick-scope'
 call jetpack#end()
  "}}}
 
@@ -290,6 +291,7 @@ let g:clever_f_chars_match_any_signs = ';'
 let g:clever_f_timeout_ms = 2000
 let g:clever_f_highlight_timeout_ms = 750 " if setted above, mustly
 let g:clever_f_fix_key_direction = 1
+let g:clever_f_mark_direct = 1
 
 " open-browser
 nmap gx <Plug>(openbrowser-smart-search)
