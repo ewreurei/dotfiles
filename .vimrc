@@ -139,10 +139,10 @@ nnoremap <script> <SID><Space>k <C-y>k<SID><Space>
 
 " Move line: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 " (t9md/vim-textmanip is better, maybe)
-nnoremap <C-j> <Cmd>move .+1<CR>
-nnoremap <C-k> <Cmd>move .-2<CR>
-vnoremap <C-j> :move '>+1<CR>gv
-vnoremap <C-k> :move '<-2<CR>gv
+nnoremap <M-j> <Cmd>move .+1<CR>
+nnoremap <M-k> <Cmd>move .-2<CR>
+vnoremap <M-j> :move '>+1<CR>gv
+vnoremap <M-k> :move '<-2<CR>gv
 " avoid accidental
 vnoremap J <Nop>
 vnoremap K <Nop>
