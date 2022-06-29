@@ -219,7 +219,7 @@ call jetpack#end()
 " Plugin settings
 "---------------------------------------
 " caw.vim "{{{
-map gcc <Plug>(caw:hatpos:toggle)
+map gc <Plug>(caw:prefix)
 map <C-c> <Plug>(caw:hatpos:toggle)
 map <Space>, <Plug>(caw:hatpos:toggle)
 
