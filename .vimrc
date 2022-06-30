@@ -214,6 +214,7 @@ Jetpack 'gamoutatsumi/dps-ghosttext.vim'
 " Jetpack 'unblevable/quick-scope'
 " Jetpack 'thinca/vim-ft-markdown_fold'
 Jetpack 'ctrlpvim/ctrlp.vim'
+Jetpack 'haya14busa/vim-edgemotion'
 call jetpack#end()
  "}}}
 
@@ -371,6 +372,10 @@ map #  <Plug>(asterisk-z#)
 map g* <Plug>(asterisk-gz*)
 map g# <Plug>(asterisk-gz#)
 let g:asterisk#keeppos = 1
+
+" vim-edgemotion
+map <C-j> <Plug>(edgemotion-j)
+map <C-k> <Plug>(edgemotion-k)
  "}}}
 
 "---------------------------------------
