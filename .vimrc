@@ -212,6 +212,8 @@ Jetpack 'haya14busa/vim-asterisk'
 Jetpack 'vim-denops/denops.vim'
 Jetpack 'gamoutatsumi/dps-ghosttext.vim'
 " Jetpack 'unblevable/quick-scope'
+" Jetpack 'thinca/vim-ft-markdown_fold'
+Jetpack 'ctrlpvim/ctrlp.vim'
 call jetpack#end()
  "}}}
 
