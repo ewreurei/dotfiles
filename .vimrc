@@ -215,6 +215,7 @@ Jetpack 'gamoutatsumi/dps-ghosttext.vim'
 " Jetpack 'thinca/vim-ft-markdown_fold'
 Jetpack 'ctrlpvim/ctrlp.vim'
 Jetpack 'haya14busa/vim-edgemotion'
+Jetpack 'mattn/vim-treesitter'
 Jetpack 'mattn/ctrlp-matchfuzzy'
 call jetpack#end()
  "}}}
