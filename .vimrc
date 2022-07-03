@@ -217,6 +217,7 @@ Jetpack 'ctrlpvim/ctrlp.vim'
 Jetpack 'haya14busa/vim-edgemotion'
 Jetpack 'mattn/vim-treesitter'
 Jetpack 'mattn/ctrlp-matchfuzzy'
+Jetpack 'markonm/traces.vim'
 call jetpack#end()
  "}}}
 
