@@ -215,6 +215,7 @@ Jetpack 'gamoutatsumi/dps-ghosttext.vim'
 " Jetpack 'thinca/vim-ft-markdown_fold'
 Jetpack 'ctrlpvim/ctrlp.vim'
 Jetpack 'haya14busa/vim-edgemotion'
+Jetpack 'mattn/ctrlp-matchfuzzy'
 call jetpack#end()
  "}}}
 
@@ -372,6 +373,9 @@ map #  <Plug>(asterisk-z#)
 map g* <Plug>(asterisk-gz*)
 map g# <Plug>(asterisk-gz#)
 let g:asterisk#keeppos = 1
+
+" ctrlp
+let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
 
 " vim-edgemotion
 map <C-j> <Plug>(edgemotion-j)
