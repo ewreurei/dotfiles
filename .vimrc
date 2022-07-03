@@ -97,6 +97,7 @@ noremap Y y$
 nmap yp yyp
 nnoremap <Space>l <Cmd>bnext<CR>
 nnoremap <Space>h <Cmd>bprevious<CR>
+nmap <Space>0 "0p
 " for operator-replace
 nnoremap <C-r> R
 " nnoremap R <Nop>
