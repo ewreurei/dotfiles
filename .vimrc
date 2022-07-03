@@ -219,6 +219,7 @@ Jetpack 'haya14busa/vim-edgemotion'
 Jetpack 'mattn/vim-treesitter'
 Jetpack 'mattn/ctrlp-matchfuzzy'
 Jetpack 'markonm/traces.vim'
+Jetpack 'tani/glance-vim'
 call jetpack#end()
  "}}}
 
@@ -383,6 +384,10 @@ let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
 " vim-edgemotion
 map <C-j> <Plug>(edgemotion-j)
 map <C-k> <Plug>(edgemotion-k)
+
+" glance-vim
+let g:glance#markdown_html = v:true
+let g:glance#server_port = 1111
  "}}}
 
 "---------------------------------------
