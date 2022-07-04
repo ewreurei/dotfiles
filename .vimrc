@@ -35,6 +35,7 @@ set scrolloff=1
 set cursorline
 set cursorlineopt=number
 " set ambiwidth=single
+set matchpairs+=（:）,「:」,『:』,【:】
 
 set laststatus=2
 " set cmdheight=1
