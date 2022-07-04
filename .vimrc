@@ -494,6 +494,7 @@ augroup VimFmap "{{{
   autocmd VimEnter * FNoreMap bo  ぼ
   autocmd VimEnter * FNoreMap lu  ぅ
   autocmd VimEnter * FNoreMap la  ぁ
+  autocmd VimEnter * FNoreMap ltu っ
   autocmd VimEnter * FNoreMap ja  じゃ
   autocmd VimEnter * FNoreMap ju  じゅ
 augroup END "}}}
