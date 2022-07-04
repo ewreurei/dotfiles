@@ -221,6 +221,7 @@ Jetpack 'mattn/vim-treesitter'
 Jetpack 'mattn/ctrlp-matchfuzzy'
 Jetpack 'markonm/traces.vim'
 Jetpack 'tani/glance-vim'
+Jetpack 'aiya000/vim-fmap'
 call jetpack#end()
  "}}}
 
@@ -389,6 +390,206 @@ map <C-k> <Plug>(edgemotion-k)
 " glance-vim
 let g:glance#markdown_html = v:true
 let g:glance#server_port = 1111
+
+" vim-fmap {{{
+let g:fmap_use_default_keymappings = v:false
+let g:fmap_use_default_mappings = v:false
+nnoremap sf <Plug>(fmap-forward-f)
+nnoremap sF <Plug>(fmap-backward-f)
+nnoremap st <Plug>(fmap-forward-t)
+nnoremap sT <Plug>(fmap-backward-t)
+
+vmap sf <Plug>(fmap-forward-f)
+vmap sF <Plug>(fmap-backward-f)
+vmap st <Plug>(fmap-forward-t)
+vmap sT <Plug>(fmap-backward-t)
+
+omap sf <Plug>(fmap-forward-f)
+omap sF <Plug>(fmap-backward-f)
+omap st <Plug>(fmap-forward-t)
+omap sT <Plug>(fmap-backward-t)
+augroup VimFmap "{{{
+  autocmd!
+  autocmd VimEnter * FNoreMap ten ・
+  autocmd VimEnter * FNoreMap ,   、
+  autocmd VimEnter * FNoreMap .   。
+  autocmd VimEnter * FNoreMap !   ！
+  autocmd VimEnter * FNoreMap ?   ？
+  autocmd VimEnter * FNoreMap sq  ''
+  autocmd VimEnter * FNoreMap mr  （
+  autocmd VimEnter * FNoreMap mre ）
+  autocmd VimEnter * FNoreMap kg  「
+  autocmd VimEnter * FNoreMap kge 」
+  autocmd VimEnter * FNoreMap nkg 『
+  autocmd VimEnter * FNoreMap nkge 』
+  autocmd VimEnter * FNoreMap sm  【
+  autocmd VimEnter * FNoreMap sme 】
+  autocmd VimEnter * FNoreMap a   あ
+  autocmd VimEnter * FNoreMap i   い
+  autocmd VimEnter * FNoreMap u   う
+  autocmd VimEnter * FNoreMap e   え
+  autocmd VimEnter * FNoreMap o   お
+  autocmd VimEnter * FNoreMap ka  か
+  autocmd VimEnter * FNoreMap ki  き
+  autocmd VimEnter * FNoreMap ku  く
+  autocmd VimEnter * FNoreMap ke  け
+  autocmd VimEnter * FNoreMap ko  こ
+  autocmd VimEnter * FNoreMap sa  さ
+  autocmd VimEnter * FNoreMap si  し
+  autocmd VimEnter * FNoreMap shi し
+  autocmd VimEnter * FNoreMap su  す
+  autocmd VimEnter * FNoreMap se  せ
+  autocmd VimEnter * FNoreMap so  そ
+  autocmd VimEnter * FNoreMap ta  た
+  autocmd VimEnter * FNoreMap ti  ち
+  autocmd VimEnter * FNoreMap tu  つ
+  autocmd VimEnter * FNoreMap te  て
+  autocmd VimEnter * FNoreMap to  と
+  autocmd VimEnter * FNoreMap na  な
+  autocmd VimEnter * FNoreMap ni  に
+  autocmd VimEnter * FNoreMap nu  ぬ
+  autocmd VimEnter * FNoreMap ne  ね
+  autocmd VimEnter * FNoreMap no  の
+  autocmd VimEnter * FNoreMap ha  は
+  autocmd VimEnter * FNoreMap hi  ひ
+  autocmd VimEnter * FNoreMap hu  ふ
+  autocmd VimEnter * FNoreMap he  へ
+  autocmd VimEnter * FNoreMap ho  ほ
+  autocmd VimEnter * FNoreMap ma  ま
+  autocmd VimEnter * FNoreMap mi  み
+  autocmd VimEnter * FNoreMap mu  む
+  autocmd VimEnter * FNoreMap me  め
+  autocmd VimEnter * FNoreMap mo  も
+  autocmd VimEnter * FNoreMap ya  や
+  autocmd VimEnter * FNoreMap yu  ゆ
+  autocmd VimEnter * FNoreMap yo  よ
+  autocmd VimEnter * FNoreMap ra  ら
+  autocmd VimEnter * FNoreMap ri  り
+  autocmd VimEnter * FNoreMap ru  る
+  autocmd VimEnter * FNoreMap re  れ
+  autocmd VimEnter * FNoreMap ro  ろ
+  autocmd VimEnter * FNoreMap wa  わ
+  autocmd VimEnter * FNoreMap wo  を
+  autocmd VimEnter * FNoreMap nn  ん
+  autocmd VimEnter * FNoreMap ga  が
+  autocmd VimEnter * FNoreMap gi  ぎ
+  autocmd VimEnter * FNoreMap gu  ぐ
+  autocmd VimEnter * FNoreMap ge  げ
+  autocmd VimEnter * FNoreMap go  ご
+  autocmd VimEnter * FNoreMap za  ざ
+  autocmd VimEnter * FNoreMap zi  じ
+  autocmd VimEnter * FNoreMap zu  ず
+  autocmd VimEnter * FNoreMap ze  ぜ
+  autocmd VimEnter * FNoreMap zo  ぞ
+  autocmd VimEnter * FNoreMap ji  じ
+  autocmd VimEnter * FNoreMap da  だ
+  autocmd VimEnter * FNoreMap di  ぢ
+  autocmd VimEnter * FNoreMap du  づ
+  autocmd VimEnter * FNoreMap de  で
+  autocmd VimEnter * FNoreMap do  ど
+  autocmd VimEnter * FNoreMap ba  ば
+  autocmd VimEnter * FNoreMap bi  び
+  autocmd VimEnter * FNoreMap bu  ぶ
+  autocmd VimEnter * FNoreMap be  べ
+  autocmd VimEnter * FNoreMap bo  ぼ
+  autocmd VimEnter * FNoreMap lu  ぅ
+  autocmd VimEnter * FNoreMap la  ぁ
+  autocmd VimEnter * FNoreMap ja  じゃ
+  autocmd VimEnter * FNoreMap ju  じゅ
+augroup END "}}}
+" fmap_mappings "{{{
+" let g:fmap_mappings = {
+"  \ 'ten': '・',
+"  \ ',':   '、',
+"  \ '.':   '。',
+"  \ '!':   '！',
+"  \ '?':   '？',
+"  \ 'sq':  '''',
+"  \ 'mr':  '（',
+"  \ 'mre': '）',
+"  \ 'kg':  '「',
+"  \ 'kge': '」',
+"  \ 'nkg': '『',
+"  \ 'nkge': '』',
+"  \ 'sm':  '【',
+"  \ 'sme': '】',
+"  \ 'a':   'あ',
+"  \ 'i':   'い',
+"  \ 'u':   'う',
+"  \ 'e':   'え',
+"  \ 'o':   'お',
+"  \ 'ka':  'か',
+"  \ 'ki':  'き',
+"  \ 'ku':  'く',
+"  \ 'ke':  'け',
+"  \ 'ko':  'こ',
+"  \ 'sa':  'さ',
+"  \ 'si':  'し',
+"  \ 'shi': 'し',
+"  \ 'su':  'す',
+"  \ 'se':  'せ',
+"  \ 'so':  'そ',
+"  \ 'ta':  'た',
+"  \ 'ti':  'ち',
+"  \ 'tu':  'つ',
+"  \ 'te':  'て',
+"  \ 'to':  'と',
+"  \ 'na':  'な',
+"  \ 'ni':  'に',
+"  \ 'nu':  'ぬ',
+"  \ 'ne':  'ね',
+"  \ 'no':  'の',
+"  \ 'ha':  'は',
+"  \ 'hi':  'ひ',
+"  \ 'hu':  'ふ',
+"  \ 'he':  'へ',
+"  \ 'ho':  'ほ',
+"  \ 'ma':  'ま',
+"  \ 'mi':  'み',
+"  \ 'mu':  'む',
+"  \ 'me':  'め',
+"  \ 'mo':  'も',
+"  \ 'ya':  'や',
+"  \ 'yu':  'ゆ',
+"  \ 'yo':  'よ',
+"  \ 'ra':  'ら',
+"  \ 'ri':  'り',
+"  \ 'ru':  'る',
+"  \ 're':  'れ',
+"  \ 'ro':  'ろ',
+"  \ 'wa':  'わ',
+"  \ 'wo':  'を',
+"  \ 'nn':  'ん',
+"  \ 'ga':  'が',
+"  \ 'gi':  'ぎ',
+"  \ 'gu':  'ぐ',
+"  \ 'ge':  'げ',
+"  \ 'go':  'ご',
+"  \ 'za':  'ざ',
+"  \ 'zi':  'じ',
+"  \ 'zu':  'ず',
+"  \ 'ze':  'ぜ',
+"  \ 'zo':  'ぞ',
+"  \ 'ji':  'じ',
+"  \ 'da':  'だ',
+"  \ 'di':  'ぢ',
+"  \ 'du':  'づ',
+"  \ 'de':  'で',
+"  \ 'do':  'ど',
+"  \ 'ba':  'ば',
+"  \ 'bi':  'び',
+"  \ 'bu':  'ぶ',
+"  \ 'be':  'べ',
+"  \ 'bo':  'ぼ',
+"  \ 'lu':  'ぅ',
+"  \ 'la':  'ぁ',
+"  \ 'ja':  'じゃ',
+"  \ 'ju':  'じゅ',
+"  \ }
+"}}}
+" @a=I\ lsaiwsif'a:$saiwsiA,j
+" らりるれろろろ、やゆよ。
+"}}}
  "}}}
 
 "---------------------------------------
