@@ -42,6 +42,12 @@ set laststatus=2
 set wildmenu
 set noshowmode
 
+augroup fileTypeSettings
+  autocmd!
+  autocmd FileType markdown setlocal noexpandtab
+  autocmd FileType markdown setl foldmethod=marker | setl foldmarker=<details>,</details>
+augroup END
+
 " tried, didn't work
 " augroup ag_tc_cursor | au!
 "   autocmd WinEnter,InsertLeave,CmdlineLeave * let &t_SI = "\e[2 q"
