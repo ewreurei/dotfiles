@@ -547,6 +547,8 @@ colorscheme everforest
 " Q. Can't input specific symbols like ・, →, ←, etc
 " A. Use digraph. Input <C-k> in insert mode, and type `.6`, `->`, `<-`.
 "  See `digraph.txt`, and for learning digraph keys, `ga` is usefull
+" Q. I want default key-mappings list (with simply description)
+" A. See `index.txt`, that is mappings overview
  "}}}
 
 " Todo "{{{
