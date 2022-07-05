@@ -544,6 +544,9 @@ colorscheme everforest
 " Q. I want to move between folds
 " A. Use `zj` and `zk`, can use that for moving to next/preview fold.
 "  for close all fold, use `zM`. See also `[z` and `]z`
+" Q. Can't input specific symbols like ・, →, ←, etc
+" A. Use digraph. Input <C-k> in insert mode, and type `.6`, `->`, `<-`.
+"  See `digraph.txt`, and for learning digraph keys, `ga` is usefull
  "}}}
 
 " Todo "{{{
