@@ -525,7 +525,6 @@ augroup END "}}}
 if has('termguicolors')
   set termguicolors
 endif
-set termguicolors
 set background=dark
 let g:everforest_background = 'hard'
 
