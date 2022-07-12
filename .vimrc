@@ -215,6 +215,7 @@ Jetpack 'machakann/vim-highlightedyank'
 Jetpack 'kana/vim-operator-user'
 Jetpack 'kana/vim-operator-replace'
 Jetpack 'kana/vim-textobj-user'
+Jetpack 'kana/vim-textobj-line'
 Jetpack 'romainl/vim-cool'
 Jetpack 'ntpeters/vim-better-whitespace'
 Jetpack 'haya14busa/vim-asterisk'
@@ -325,7 +326,7 @@ let g:openbrowser_search_engines = {
   \ 'ghrepo': 'https://github.com/{query}'
   \ }
 " open github repo (user/name)
-nmap sp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR>
+nmap sgp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR>
 
 " highlighted put
 nmap p <Plug>(highlightedput-p)
@@ -342,35 +343,6 @@ let g:highlightedyank_highlight_duration = 215
 map R <Plug>(operator-replace)
 
 " textobj-user
-" https://github.com/kana/vim-textobj-user#complex-text-objects-defined-by-functions "{{{
-call textobj#user#plugin('line', {
-\   '-': {
-\     'select-a-function': 'CurrentLineA',
-\     'select-a': 'al',
-\     'select-i-function': 'CurrentLineI',
-\     'select-i': 'il',
-\   },
-\ })
-
-function! CurrentLineA()
-  normal! 0
-  let head_pos = getpos('.')
-  normal! $
-  let tail_pos = getpos('.')
-  return ['v', head_pos, tail_pos]
-endfunction
-
-function! CurrentLineI()
-  normal! ^
-  let head_pos = getpos('.')
-  normal! g_
-  let tail_pos = getpos('.')
-  let non_blank_char_exists_p = getline('.')[head_pos[2] - 1] !~# '\s'
-  return
-  \ non_blank_char_exists_p
-  \ ? ['v', head_pos, tail_pos]
-  \ : 0
-endfunction "}}}
 " makeshift
 call textobj#user#plugin('repositoriename', {
   \ 'repo': {
@@ -552,7 +524,6 @@ colorscheme everforest
  "}}}
 
 " Todo "{{{
-" - migrate to kana/vim-textobj-line
 " - install lsp plugins
 " - learn about filetype options
  "}}}
