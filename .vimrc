@@ -327,6 +327,15 @@ let g:openbrowser_search_engines = {
   \ }
 " open github repo (user/name)
 nmap sgp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR>
+" nmap gz yi':<C-u>OpenBrowser https://github.com/<C-r>"<CR>
+nmap gz :call <SID>open_repo()<CR>
+" Jetpack 'tyru/caw.vim'
+function! s:open_repo()
+  let l:reg = @z
+  normal! "zyi'
+  execute 'OpenBrowser https://github.com/' . @z
+  let @z = l:reg
+endfunction
 
 " highlighted put
 nmap p <Plug>(highlightedput-p)
