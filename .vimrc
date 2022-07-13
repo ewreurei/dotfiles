@@ -367,6 +367,7 @@ let g:asterisk#keeppos = 1
 
 " ctrlp
 let g:ctrlp_match_func = {'match': 'ctrlp_matchfuzzy#matcher'}
+map <Space>f <Plug>(ctrlp)
 
 " vim-edgemotion
 map <C-j> <Plug>(edgemotion-j)
