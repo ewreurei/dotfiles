@@ -327,9 +327,7 @@ let g:openbrowser_search_engines = {
   \ }
 " open github repo (user/name)
 nmap sgp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR>
-" nmap gz yi':<C-u>OpenBrowser https://github.com/<C-r>"<CR>
 nmap gz :call <SID>open_repo()<CR>
-" Jetpack 'tyru/caw.vim'
 function! s:open_repo()
   let l:reg = @z
   normal! "zyi'
