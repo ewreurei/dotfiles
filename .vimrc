@@ -45,7 +45,7 @@ set noshowmode
 augroup fileTypeSettings
   autocmd!
   autocmd FileType markdown setlocal noexpandtab
-  autocmd FileType markdown setl foldmethod=marker | setl foldmarker=<details>,</details>
+  autocmd FileType markdown setlocal foldmethod=marker foldmarker=<details>,</details>
 augroup END
 
 " tried, didn't work
