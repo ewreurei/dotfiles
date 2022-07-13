@@ -378,10 +378,10 @@ endfunction
 " vim-fmap {{{
 let g:fmap_use_default_keymappings = v:false
 let g:fmap_use_default_mappings = v:false
-nnoremap sf <Plug>(fmap-forward-f)
-nnoremap sF <Plug>(fmap-backward-f)
-nnoremap st <Plug>(fmap-forward-t)
-nnoremap sT <Plug>(fmap-backward-t)
+nmap sf <Plug>(fmap-forward-f)
+nmap sF <Plug>(fmap-backward-f)
+nmap st <Plug>(fmap-forward-t)
+nmap sT <Plug>(fmap-backward-t)
 
 vmap sf <Plug>(fmap-forward-f)
 vmap sF <Plug>(fmap-backward-f)
