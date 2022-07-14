@@ -229,6 +229,8 @@ Jetpack 'mattn/ctrlp-matchfuzzy'
 Jetpack 'markonm/traces.vim'
 Jetpack 'tani/glance-vim'
 Jetpack 'aiya000/vim-fmap'
+Jetpack 'Shougo/vimproc.vim'
+Jetpack 'osyo-manga/vim-vigemo'
 call jetpack#end()
  "}}}
 
@@ -502,6 +504,9 @@ augroup END "}}}
 " @a=I\ lsaiwsif'a:$saiwsiA,j
 " らりるれろろろ、やゆよ。
 "}}}
+
+" migemo
+nmap <Space>mi <Plug>(vigemo-search)
  "}}}
 
 "---------------------------------------
