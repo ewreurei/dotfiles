@@ -42,7 +42,7 @@ set laststatus=2
 set wildmenu
 set noshowmode
 
-augroup fileTypeSettings
+augroup FileTypeSettings
   autocmd!
   autocmd FileType markdown setlocal noexpandtab
   autocmd FileType markdown setlocal foldmethod=marker foldmarker=<details>,</details>
@@ -166,6 +166,15 @@ nnoremap <Up> gk
 nnoremap <Down> gj
 nnoremap <Space>n gn
 nnoremap <Space>N gN
+
+" autocmd
+augroup FileTypeMappings
+  autocmd!
+  " FIXME: When editing (not viewing) help file, can't use these keys
+  autocmd FileType help nnoremap <buffer> q <C-w>c
+  autocmd FileType help nnoremap <buffer> u <C-u>
+  autocmd FileType help nnoremap <buffer> d <C-d>
+augroup END
 
 " Commands
 command! Vimrc edit $MYVIMRC
