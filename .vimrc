@@ -239,8 +239,9 @@ call jetpack#end()
 "---------------------------------------
 " caw.vim "{{{
 map gc <Plug>(caw:prefix)
-map <C-c> <Plug>(caw:hatpos:toggle)
+nmap <C-c> <Plug>(caw:hatpos:toggle)
 map <Space>, <Plug>(caw:hatpos:toggle)
+map ,<Space> <Plug>(caw:hatpos:toggle)
 
 " winresizer
 let g:winresizer_vert_resize = 1
