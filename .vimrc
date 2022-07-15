@@ -240,6 +240,7 @@ Jetpack 'tani/glance-vim'
 Jetpack 'aiya000/vim-fmap'
 Jetpack 'Shougo/vimproc.vim'
 Jetpack 'osyo-manga/vim-vigemo'
+Jetpack 'kana/vim-smartword'
 call jetpack#end()
  "}}}
 
@@ -517,6 +518,20 @@ augroup END "}}}
 
 " migemo
 nmap <Space>mi <Plug>(vigemo-search)
+
+" smartword
+nmap w <Plug>(smartword-w)
+nmap b <Plug>(smartword-b)
+nmap e <Plug>(smartword-e)
+nmap ge <Plug>(smartword-ge)
+xmap w <Plug>(smartword-w)
+xmap b <Plug>(smartword-b)
+xmap e <Plug>(smartword-e)
+xmap ge <Plug>(smartword-ge)
+nnoremap ,w w
+nnoremap ,b b
+nnoremap ,e e
+nnoremap ,ge ge
  "}}}
 
 "---------------------------------------
