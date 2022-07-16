@@ -335,13 +335,17 @@ if has('win32')
     \  'args': ['{browser}', '--private-window', '{uri}']}
     \ ]
 endif
-let g:openbrowser_search_engines = {
-  \ 'ghrepo': 'https://github.com/{query}'
-  \ }
 " open github repo (user/name)
-nmap sgp yir:<C-u>OpenBrowser https://github.com/<C-r>"<CR>
-nmap gz :call <SID>open_repo()<CR>
+nmap gz <Cmd>call <SID>open_repo()<CR>
+nmap ,gz <Cmd>call <SID>open_quoted_repo()<CR>
 function! s:open_repo()
+  let url = matchstr(getline('.'), '[0-9a-zA-Z-_\.]\+\/[0-9a-zA-Z-_\.]\+')
+  if url !=# ''
+    execute 'OpenBrowser https://github.com/' . url
+  endif
+endfunction
+
+function! s:open_quoted_repo()
   let l:reg = @z
   normal! "zyi'
   execute 'OpenBrowser https://github.com/' . @z
@@ -364,12 +368,12 @@ map R <Plug>(operator-replace)
 
 " textobj-user
 " makeshift
-call textobj#user#plugin('repositoriename', {
-  \ 'repo': {
-  \   'pattern': '[0-9a-zA-Z-_\.]\+\/[0-9a-zA-Z-_\.]\+',
-  \   'select': ['ar', 'ir'],
-  \   },
-  \ })
+" call textobj#user#plugin('repositoriename', {
+"  \ 'repo': {
+"  \   'pattern': '[0-9a-zA-Z-_\.]\+\/[0-9a-zA-Z-_\.]\+',
+"  \   'select': ['ar', 'ir'],
+"  \   },
+"  \ })
 
 " vim-asterisk
 map *  <Plug>(asterisk-z*)
