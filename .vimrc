@@ -528,10 +528,10 @@ xmap w <Plug>(smartword-w)
 xmap b <Plug>(smartword-b)
 xmap e <Plug>(smartword-e)
 xmap ge <Plug>(smartword-ge)
-nnoremap ,w w
-nnoremap ,b b
-nnoremap ,e e
-nnoremap ,ge ge
+noremap ,w w
+noremap ,b b
+noremap ,e e
+noremap ,ge ge
  "}}}
 
 "---------------------------------------
