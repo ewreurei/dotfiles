@@ -543,6 +543,7 @@ if has('termguicolors')
 endif
 set background=dark
 let g:everforest_background = 'hard'
+let g:everforest_disable_italic_comment = 1
 
 colorscheme everforest
  "}}}
