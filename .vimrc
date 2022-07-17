@@ -244,6 +244,7 @@ Jetpack 'aiya000/vim-fmap'
 Jetpack 'Shougo/vimproc.vim'
 Jetpack 'osyo-manga/vim-vigemo'
 Jetpack 'kana/vim-smartword'
+Jetpack 'kana/vim-textobj-indent'
 call jetpack#end()
  "}}}
 
