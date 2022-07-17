@@ -115,6 +115,9 @@ nnoremap X "_x
 vnoremap g+ g<C-a>
 vnoremap g- g<C-x>
 
+noremap ( [(
+noremap ) ])
+
 " nohlsearch for now matching
 nnoremap <Esc><Esc> <Cmd>nohlsearch<CR>
 " highlighting again: `:h v:hlsearch`
