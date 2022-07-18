@@ -245,6 +245,7 @@ Jetpack 'Shougo/vimproc.vim'
 Jetpack 'osyo-manga/vim-vigemo'
 Jetpack 'kana/vim-smartword'
 Jetpack 'kana/vim-textobj-indent'
+Jetpack 'machakann/vim-swap'
 call jetpack#end()
  "}}}
 
@@ -540,6 +541,14 @@ noremap ,w w
 noremap ,b b
 noremap ,e e
 noremap ,ge ge
+
+" vim-swap
+nmap s< <Plug>(swap-prev)
+nmap s> <Plug>(swap-next)
+omap i, <Plug>(swap-textobject-i)
+xmap i, <Plug>(swap-textobject-i)
+omap a, <Plug>(swap-textobject-a)
+xmap a, <Plug>(swap-textobject-a)
  "}}}
 
 "---------------------------------------
