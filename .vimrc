@@ -246,6 +246,7 @@ Jetpack 'osyo-manga/vim-vigemo'
 Jetpack 'kana/vim-smartword'
 Jetpack 'kana/vim-textobj-indent'
 Jetpack 'machakann/vim-swap'
+Jetpack 'machakann/vim-textobj-delimited'
 call jetpack#end()
  "}}}
 
