@@ -40,6 +40,8 @@ set matchpairs+=（:）,「:」,『:』,【:】
 set laststatus=2
 " set cmdheight=1
 set wildmenu
+set wildoptions+=pum
+set pumheight=15
 set noshowmode
 
 augroup FileTypeSettings
