@@ -273,9 +273,10 @@ call operator#sandwich#set('delete', 'all', 'hi_duration', 175)
 " recipe initialize
 let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
 " To insert single quote by `si`
-let g:sandwich#recipes += [{'buns': ['''', ''''], 'input': ['si'],  'quoteescape': 1}]
+let g:sandwich#recipes += [{'buns': ['''', ''''], 'input': ['si'], 'quoteescape': 1}]
 " markdown link
-let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['md'],  'quoteescape': 1}]
+let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['mdl'], 'quoteescape': 1}]
+let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['mdp'], 'quoteescape': 1, 'command': ['normal! "*P']}]
 
 " 日本語文章用（どのぐらい使うのかわからないけど一応）
 let g:sandwich#recipes += [{'buns': ['（', '）'], 'input': ['mr']}] " fullwidth maru
