@@ -249,6 +249,7 @@ Jetpack 'kana/vim-smartword'
 Jetpack 'kana/vim-textobj-indent'
 Jetpack 'machakann/vim-swap'
 Jetpack 'machakann/vim-textobj-delimited'
+Jetpack 'zef/vim-cycle'
 call jetpack#end()
  "}}}
 
@@ -553,6 +554,10 @@ omap i, <Plug>(swap-textobject-i)
 xmap i, <Plug>(swap-textobject-i)
 omap a, <Plug>(swap-textobject-a)
 xmap a, <Plug>(swap-textobject-a)
+
+" vim-cycle
+nmap + <Plug>CycleNext
+nmap - <Plug>CyclePrevious
  "}}}
 
 "---------------------------------------
