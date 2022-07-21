@@ -561,8 +561,8 @@ nmap + <Plug>CycleNext
 nmap - <Plug>CyclePrevious
 
 " skkeleton
-imap <C-j> <Plug>(skkeleton-enable)
-cmap <C-j> <Plug>(skkeleton-enable)
+imap <C-j> <Plug>(skkeleton-toggle)
+cmap <C-j> <Plug>(skkeleton-toggle)
 call skkeleton#config({
   \ 'globalJisyo': '~/.skk/SKK-JISYO.L',
   \ 'eggLikeNewline': v:true,
