@@ -250,6 +250,7 @@ Jetpack 'kana/vim-textobj-indent'
 Jetpack 'machakann/vim-swap'
 Jetpack 'machakann/vim-textobj-delimited'
 Jetpack 'zef/vim-cycle'
+Jetpack 'vim-skk/skkeleton'
 call jetpack#end()
  "}}}
 
@@ -558,6 +559,18 @@ xmap a, <Plug>(swap-textobject-a)
 " vim-cycle
 nmap + <Plug>CycleNext
 nmap - <Plug>CyclePrevious
+
+" skkeleton
+imap <C-j> <Plug>(skkeleton-enable)
+cmap <C-j> <Plug>(skkeleton-enable)
+call skkeleton#config({
+  \ 'globalJisyo': '~/.skk/SKK-JISYO.L',
+  \ 'eggLikeNewline': v:true,
+  \ 'keepState': v:true,
+  \ 'setUndoPoint': v:false,
+  \ 'markerHenkan': ';',
+  \ 'markerHenkanSelect': '',
+  \ })
  "}}}
 
 "---------------------------------------
