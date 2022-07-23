@@ -48,6 +48,7 @@ augroup FileTypeSettings
   autocmd!
   autocmd FileType markdown setlocal noexpandtab
   autocmd FileType markdown setlocal foldmethod=marker foldmarker=<details>,</details>
+  autocmd FileType gitcommit setlocal spell
 augroup END
 
 " tried, didn't work
