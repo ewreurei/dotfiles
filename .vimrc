@@ -214,7 +214,9 @@ endfunction
 "---------------------------------------
 " Plugins
 "---------------------------------------
-call jetpack#begin() "{{{
+packadd vim-jetpack "{{{
+call jetpack#begin()
+Jetpack 'tani/vim-jetpack', { 'opt': 1 }
 Jetpack 'vim-jp/vimdoc-ja'
 Jetpack 'sainnhe/everforest'
 Jetpack 'tyru/caw.vim'
