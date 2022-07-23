@@ -565,7 +565,6 @@ imap <C-j> <Plug>(skkeleton-toggle)
 cmap <C-j> <Plug>(skkeleton-toggle)
 call skkeleton#config({
   \ 'globalJisyo': '~/.skk/SKK-JISYO.L',
-  \ 'eggLikeNewline': v:true,
   \ 'keepState': v:true,
   \ 'setUndoPoint': v:false,
   \ 'markerHenkan': ';',
