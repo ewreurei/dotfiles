@@ -190,6 +190,9 @@ set wildcharm=<C-z>
 cnoremap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<C-z>'
 cnoremap <expr> <S-Tab> getcmdtype() ==# '/' ? '<C-t>' : '<C-z><C-p><C-p>'
 
+" macros
+let @j = "oJetpack '\<Esc>"
+
 " Commands
 command! Vimrc edit $MYVIMRC
 
