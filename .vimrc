@@ -182,6 +182,14 @@ augroup FileTypeMappings
   autocmd FileType help nnoremap <buffer> d <C-d>
 augroup END
 
+" not a good approach, see these help: `c_<Tab>`, `c_<S-Tab>`, `wc`
+" (when search tab character, use '\t')
+" cmap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<Tab>'
+" cmap <expr> <S-Tab> getcmdtype() ==# '/' ? '<C-t>' : '<S-Tab>'
+set wildcharm=<C-z>
+cnoremap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<C-z>'
+cnoremap <expr> <S-Tab> getcmdtype() ==# '/' ? '<C-t>' : '<C-z><C-p><C-p>'
+
 " Commands
 command! Vimrc edit $MYVIMRC
 
