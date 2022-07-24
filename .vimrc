@@ -162,11 +162,6 @@ vnoremap <M-k> :move '<-2<CR>gv
 vnoremap J <Nop>
 vnoremap K <Nop>
 
-" old, this approach dirtied unnamed register, see `:h quote_quote` "{{{
-" https://qiita.com/itmammoth/items/312246b4b7688875d023
-" nnoremap <C-k> "zdd<Up>"zP
-" nnoremap <C-j> "zdd"zp "}}}
-
 " Escaping
 nnoremap <Up> gk
 nnoremap <Down> gj
