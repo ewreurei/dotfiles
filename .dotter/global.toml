@@ -3,6 +3,7 @@
 # https://github.com/SuperCuber/dotter/wiki/Setup-and-Configuration#complex-target
 # ".vimrc" = "~/.vimrc"
 ".vimrc" = { target = "~/.vimrc", type = "symbolic" }
+".vim/after" = { target = "~/.vim/after", type = "symbolic" }
 
 ".config/bat/config" = "~/.config/bat/config"
 ".config/bottom/bottom.toml" = "~/.config/bottom/bottom.toml"

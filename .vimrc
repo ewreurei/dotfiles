@@ -173,15 +173,6 @@ nnoremap <Down> gj
 nnoremap <Space>n gn
 nnoremap <Space>N gN
 
-" autocmd
-augroup FileTypeMappings
-  autocmd!
-  " FIXME: When editing (not viewing) help file, can't use these keys
-  autocmd FileType help nnoremap <buffer> q <C-w>c
-  autocmd FileType help nnoremap <buffer> u <C-u>
-  autocmd FileType help nnoremap <buffer> d <C-d>
-augroup END
-
 " not a good approach, see these help: `c_<Tab>`, `c_<S-Tab>`, `wc`
 " (when search tab character, use '\t')
 " cmap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<Tab>'
