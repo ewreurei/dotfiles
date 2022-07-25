@@ -182,12 +182,9 @@ let @j = "oJetpack '\<Esc>"
 " Commands
 command! Vimrc edit $MYVIMRC
 
-" Todo: 折り畳みについていつか詳しく調べる
-" ごまかしマッピング:
 noremap ss m`A "{{{<Esc>g``
 noremap se m`A "}}}<Esc>g``
 
-" 調べたもののよくわからなかったけど、使えそうなので一応入れとく
 " https://leafcage.hateblo.jp/entry/2013/04/24/053113
 nnoremap z[ <Cmd>call <SID>put_foldmarker(0)<CR>
 nnoremap z] <Cmd>call <SID>put_foldmarker(1)<CR>
@@ -205,7 +202,6 @@ function! s:put_foldmarker(foldclose_p) "{{{
 endfunction
 "}}}
 
-" （noremapとnnoremapは今のところ雰囲気でやってるが自信はない、いちいちvnoremapとかするのめんどくてnoremap多用しちゃってる...）
 " :help map-table
  "}}}
 
