@@ -604,7 +604,6 @@ colorscheme everforest
 
 " Todo "{{{
 " - install lsp plugins
-" - learn about filetype options
  "}}}
 
 " Scouter: https://vim-jp.org/vim-users-jp/2009/07/10/Hack-39.html "{{{
