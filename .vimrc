@@ -50,14 +50,6 @@ augroup FileTypeSettings
   autocmd FileType markdown setlocal foldmethod=marker foldmarker=<details>,</details>
   autocmd FileType gitcommit setlocal spell
 augroup END
-
-" tried, didn't work
-" augroup ag_tc_cursor | au!
-"   autocmd WinEnter,InsertLeave,CmdlineLeave * let &t_SI = "\e[2 q"
-"   autocmd InsertEnter,CmdlineEnter * let &t_EI = "\e[6 q"
-" augroup end
-" autocmd WinEnter,InsertLeave,CmdlineLeave * set t_SI='[2'
-" autocmd InsertEnter,CmdlineEnter * set t_EI='[2'
  "}}}
 
 "---------------------------------------
