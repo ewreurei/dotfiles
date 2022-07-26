@@ -59,6 +59,13 @@ if has('vim_starting') && has('reltime')
     \ | echomsg 'startuptime: ' . reltimestr(g:startuptime)
   augroup END
 endif
+
+" if not installed jetpack, install jetpack (ref: https://github.com/tani/vim-jetpack#install-vim-jetpack-if-it-is-unavailable)
+let s:jetpackfile = expand(has('win32') ? '~/vimfiles' : '~/.vim') .. '/pack/jetpack/opt/vim-jetpack/plugin/jetpack.vim'
+let s:jetpackurl = "https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim"
+if !filereadable(s:jetpackfile)
+  call system(printf('curl -fsSLo %s --create-dirs %s', s:jetpackfile, s:jetpackurl))
+endif
  "}}}
 
 "---------------------------------------
