@@ -182,11 +182,28 @@ set wildcharm=<C-z>
 cnoremap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<C-z>'
 cnoremap <expr> <S-Tab> getcmdtype() ==# '/' ? '<C-t>' : '<C-z><C-p><C-p>'
 
-" macros
+" macros (:h expr-quote)
 let @j = "oJetpack '\<Esc>"
 
 " Commands
 command! Vimrc edit $MYVIMRC
+command! Wrap call s:toggle_option('wrap')
+command! Number call s:toggle_option('number')
+command! ExpandTab call s:toggle_option('expandtab')
+" for testing
+command! Hoge call s:toggle_option('hoge')
+" Todo: define `:Toggle` command and wrap s:toggle_option function
+" command! Toggle call s:toggle_option('')
+
+function! s:toggle_option(optname)
+  if exists('&' .. a:optname)
+    execute 'setlocal' a:optname .. '!'
+    let optstat = (eval('&' .. a:optname) ? a:optname : 'no' .. a:optname)
+    echo "Now:" optstat
+  else
+    echohl WarningMsg | echo "Error: This option doesn't exist" | echohl None
+  endif
+endfunction
 
 noremap ss m`A "{{{<Esc>g``
 noremap se m`A "}}}<Esc>g``
