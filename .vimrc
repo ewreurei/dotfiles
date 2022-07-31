@@ -99,7 +99,7 @@ nnoremap <Space>w <C-w>
 noremap <Space>y "*y
 noremap <Space>p "*p
 nnoremap ]<Space> <Cmd>call append(expand('.'), '')<CR>
-nnoremap [<Space> <Cmd>call append((line(".") - 1), '')<CR>
+nnoremap [<Space> <Cmd>call append((line('.') - 1), '')<CR>
  "}}}
 
 nnoremap <Space> <Nop>
