@@ -187,6 +187,26 @@ set wildcharm=<C-z>
 cnoremap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<C-z>'
 cnoremap <expr> <S-Tab> getcmdtype() ==# '/' ? '<C-t>' : '<C-z><C-p><C-p>'
 
+noremap ssi m`A "{{{<Esc>g``
+noremap sse m`A "}}}<Esc>g``
+
+" https://leafcage.hateblo.jp/entry/2013/04/24/053113
+nnoremap z[ <Cmd>call <SID>put_foldmarker(0)<CR>
+nnoremap z] <Cmd>call <SID>put_foldmarker(1)<CR>
+function! s:put_foldmarker(foldclose_p) "{{{
+  let crrstr = getline('.')
+  let padding = crrstr=='' ? '' : crrstr=~'\s$' ? '' : ' '
+  let [cms_start, cms_end] = ['', '']
+  let outside_a_comment_p = synIDattr(synID(line('.'), col('$')-1, 1), 'name') !~? 'comment'
+  if outside_a_comment_p
+    let cms_start = matchstr(&cms,'\V\s\*\zs\.\+\ze%s')
+    let cms_end = matchstr(&cms,'\V%s\zs\.\+')
+  endif
+  let fmr = split(&fmr, ',')[a:foldclose_p]. (v:count ? v:count : '')
+  exe 'norm! A'. padding. cms_start. fmr. cms_end
+endfunction
+"}}}
+
 " macros (:h expr-quote)
 let @j = "oJetpack '\<Esc>"
 
@@ -209,26 +229,6 @@ function! s:toggle_option(optname)
     echohl WarningMsg | echo "Error: This option doesn't exist" | echohl None
   endif
 endfunction
-
-noremap ss m`A "{{{<Esc>g``
-noremap se m`A "}}}<Esc>g``
-
-" https://leafcage.hateblo.jp/entry/2013/04/24/053113
-nnoremap z[ <Cmd>call <SID>put_foldmarker(0)<CR>
-nnoremap z] <Cmd>call <SID>put_foldmarker(1)<CR>
-function! s:put_foldmarker(foldclose_p) "{{{
-  let crrstr = getline('.')
-  let padding = crrstr=='' ? '' : crrstr=~'\s$' ? '' : ' '
-  let [cms_start, cms_end] = ['', '']
-  let outside_a_comment_p = synIDattr(synID(line('.'), col('$')-1, 1), 'name') !~? 'comment'
-  if outside_a_comment_p
-    let cms_start = matchstr(&cms,'\V\s\*\zs\.\+\ze%s')
-    let cms_end = matchstr(&cms,'\V%s\zs\.\+')
-  endif
-  let fmr = split(&fmr, ',')[a:foldclose_p]. (v:count ? v:count : '')
-  exe 'norm! A'. padding. cms_start. fmr. cms_end
-endfunction
-"}}}
 
 " :help map-table
  "}}}
