@@ -374,7 +374,7 @@ endif
 nmap gz <Cmd>call <SID>open_repo()<CR>
 nmap ,gz <Cmd>call <SID>open_quoted_repo()<CR>
 function! s:open_repo()
-  let url = matchstr(getline('.'), '[0-9a-zA-Z-_\.]\+\/[0-9a-zA-Z-_\.]\+')
+  let url = matchstr(expand('<cWORD>'), '[0-9a-zA-Z-_\.]\+\/[0-9a-zA-Z-_\.]\+')
   if url !=# ''
     execute 'OpenBrowser https://github.com/' . url
   endif
