@@ -277,6 +277,7 @@ Jetpack 'machakann/vim-swap'
 Jetpack 'machakann/vim-textobj-delimited'
 Jetpack 'zef/vim-cycle'
 Jetpack 'vim-skk/skkeleton'
+Jetpack 'arthurxavierx/vim-caser'
 call jetpack#end()
  "}}}
 
@@ -602,6 +603,9 @@ call skkeleton#config({
   \ 'markerHenkan': ';',
   \ 'markerHenkanSelect': '',
   \ })
+
+" vim-caser
+let g:caser_prefix = 'cr'
  "}}}
 
 "---------------------------------------
