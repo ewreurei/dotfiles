@@ -454,20 +454,23 @@ omap st <Plug>(fmap-forward-t)
 omap sT <Plug>(fmap-backward-t)
 augroup VimFmap "{{{
   autocmd!
-  autocmd VimEnter * FNoreMap ten ・
+  autocmd VimEnter * FNoreMap /   ・
+  autocmd VimEnter * FNoreMap ;ten ・
+  autocmd VimEnter * FNoreMap tj  \|
+  autocmd VimEnter * FNoreMap sq  ''
+  autocmd VimEnter * FNoreMap dq  \"
   autocmd VimEnter * FNoreMap ,   、
   autocmd VimEnter * FNoreMap .   。
   autocmd VimEnter * FNoreMap !   ！
   autocmd VimEnter * FNoreMap ?   ？
-  autocmd VimEnter * FNoreMap sq  ''
   autocmd VimEnter * FNoreMap mr  （
-  autocmd VimEnter * FNoreMap mre ）
+  autocmd VimEnter * FNoreMap fmr ）
   autocmd VimEnter * FNoreMap kg  「
-  autocmd VimEnter * FNoreMap kge 」
+  autocmd VimEnter * FNoreMap fkg 」
   autocmd VimEnter * FNoreMap nkg 『
-  autocmd VimEnter * FNoreMap nkge 』
+  autocmd VimEnter * FNoreMap fnkg 』
   autocmd VimEnter * FNoreMap sm  【
-  autocmd VimEnter * FNoreMap sme 】
+  autocmd VimEnter * FNoreMap fsm 】
   autocmd VimEnter * FNoreMap a   あ
   autocmd VimEnter * FNoreMap i   い
   autocmd VimEnter * FNoreMap u   う
@@ -522,10 +525,10 @@ augroup VimFmap "{{{
   autocmd VimEnter * FNoreMap go  ご
   autocmd VimEnter * FNoreMap za  ざ
   autocmd VimEnter * FNoreMap zi  じ
+  autocmd VimEnter * FNoreMap ji  じ
   autocmd VimEnter * FNoreMap zu  ず
   autocmd VimEnter * FNoreMap ze  ぜ
   autocmd VimEnter * FNoreMap zo  ぞ
-  autocmd VimEnter * FNoreMap ji  じ
   autocmd VimEnter * FNoreMap da  だ
   autocmd VimEnter * FNoreMap di  ぢ
   autocmd VimEnter * FNoreMap du  づ
@@ -539,6 +542,9 @@ augroup VimFmap "{{{
   autocmd VimEnter * FNoreMap lu  ぅ
   autocmd VimEnter * FNoreMap la  ぁ
   autocmd VimEnter * FNoreMap ltu っ
+  autocmd VimEnter * FNoreMap lya ゃ
+  autocmd VimEnter * FNoreMap lyu ゅ
+  autocmd VimEnter * FNoreMap lyo ょ
   autocmd VimEnter * FNoreMap ja  じゃ
   autocmd VimEnter * FNoreMap ju  じゅ
 augroup END "}}}
