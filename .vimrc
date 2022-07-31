@@ -115,6 +115,11 @@ nnoremap <Space>l <Cmd>bnext<CR>
 nnoremap <Space>h <Cmd>bprevious<CR>
 nmap <Space>0 "0p
 nnoremap sr r<C-k>
+" inoremap <C-j> <C-x>
+noremap s; :<C-u>q
+noremap sw :<C-u>w
+" Say thanks to clever-f :-)
+nnoremap ; :
 " for operator-replace
 nnoremap <C-r> R
 " nnoremap R <Nop>
