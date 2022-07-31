@@ -376,10 +376,10 @@ function! s:open_repo()
 endfunction
 
 function! s:open_quoted_repo()
-  let l:reg = @z
+  let reg = @z
   normal! "zyi'
   execute 'OpenBrowser https://github.com/' . @z
-  let @z = l:reg
+  let @z = reg
 endfunction
 
 " highlighted put
