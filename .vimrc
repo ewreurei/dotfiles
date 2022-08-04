@@ -605,19 +605,19 @@ call skkeleton#config({
   \ })
 
 " vim-caser
-" from readme:
+" via readme, and few custom:
 " | Case                                | Default Mapping |
 " | ----------------------------------- | --------------- |
-" | MixedCase or PascalCase             | gsm or gsp      |
-" | camelCase                           | gsc             |
-" | snake_case                          | gs_             |
-" | UPPER_CASE                          | gsu or gsU      |
-" | Title Case                          | gst             |
-" | Sentence case                       | gss             |
-" | space case                          | gs<space>       |
-" | dash-case or kebab-case             | gs- or gsk      |
-" | Title-Dash-Case or Title-Kebab-Case | gsK             |
-" | dot.case                            | gs.             |
+" | MixedCase or PascalCase             | ,sm or ,sp      |
+" | camelCase                           | ,sc             |
+" | snake_case                          | ,s_             |
+" | UPPER_CASE                          | ,su or ,sU      |
+" | Title Case                          | ,st             |
+" | Sentence case                       | ,ss             |
+" | space case                          | ,s<space>       |
+" | dash-case or kebab-case             | ,s- or ,sk      |
+" | Title-Dash-Case or Title-Kebab-Case | ,sK             |
+" | dot.case                            | ,s.             |
 
 let g:caser_prefix = ',s'
  "}}}
