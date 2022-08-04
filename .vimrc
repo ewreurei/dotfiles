@@ -605,7 +605,21 @@ call skkeleton#config({
   \ })
 
 " vim-caser
-let g:caser_prefix = 'cr'
+" from readme:
+" | Case                                | Default Mapping |
+" | ----------------------------------- | --------------- |
+" | MixedCase or PascalCase             | gsm or gsp      |
+" | camelCase                           | gsc             |
+" | snake_case                          | gs_             |
+" | UPPER_CASE                          | gsu or gsU      |
+" | Title Case                          | gst             |
+" | Sentence case                       | gss             |
+" | space case                          | gs<space>       |
+" | dash-case or kebab-case             | gs- or gsk      |
+" | Title-Dash-Case or Title-Kebab-Case | gsK             |
+" | dot.case                            | gs.             |
+
+let g:caser_prefix = ',s'
  "}}}
 
 "---------------------------------------
