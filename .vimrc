@@ -608,18 +608,55 @@ call skkeleton#config({
 " via readme, and few custom:
 " | Case                                | Default Mapping |
 " | ----------------------------------- | --------------- |
-" | MixedCase or PascalCase             | ,sm or ,sp      |
+" | MixedCase or PascalCase             | ,sm  ,sp  ,sC   |
 " | camelCase                           | ,sc             |
-" | snake_case                          | ,s_             |
-" | UPPER_CASE                          | ,su or ,sU      |
+" | snake_case                          | ,s_  ,ss        |
+" | UPPER_CASE                          | ,su  ,sU        |
 " | Title Case                          | ,st             |
-" | Sentence case                       | ,ss             |
-" | space case                          | ,s<space>       |
-" | dash-case or kebab-case             | ,s- or ,sk      |
+" | Sentence case                       | ,s<Space>       |
+" | dash-case or kebab-case             | ,s-  ,sk        |
 " | Title-Dash-Case or Title-Kebab-Case | ,sK             |
 " | dot.case                            | ,s.             |
+" | tOGGLE cASE                         | ,sT             |
+" | normal lower case                   | ,sn             |
+" | NORMAL UPPER CASE                   | ,sN             |
 
-let g:caser_prefix = ',s'
+" let g:caser_prefix = ',s'
+let g:caser_no_mappings = 1
+" from defaults {{{
+nmap ,sm <Plug>CaserMixedCase
+xmap ,sm <Plug>CaserVMixedCase
+nmap ,sp <Plug>CaserMixedCase
+xmap ,sp <Plug>CaserVMixedCase
+nmap ,sc <Plug>CaserCamelCase
+xmap ,sc <Plug>CaserVCamelCase
+nmap ,s_ <Plug>CaserSnakeCase
+xmap ,s_ <Plug>CaserVSnakeCase
+nmap ,su <Plug>CaserUpperCase
+xmap ,su <Plug>CaserVUpperCase
+nmap ,sU <Plug>CaserUpperCase
+xmap ,sU <Plug>CaserVUpperCase
+nmap ,st <Plug>CaserTitleCase
+xmap ,st <Plug>CaserVTitleCase
+nmap ,s- <Plug>CaserKebabCase
+xmap ,s- <Plug>CaserVKebabCase
+nmap ,sk <Plug>CaserKebabCase
+xmap ,sk <Plug>CaserVKebabCase
+nmap ,sK <Plug>CaserTitleKebabCase
+xmap ,sK <Plug>CaserVTitleKebabCase
+nmap ,s. <Plug>CaserDotCase
+xmap ,s. <Plug>CaserVDotCase
+" }}}
+nmap ,sC <Plug>CaserMixedCase
+xmap ,sC <Plug>CaserVMixedCase
+nmap ,ss <Plug>CaserSnakeCase
+xmap ,ss <Plug>CaserVSnakeCase
+nmap ,s<Space> <Plug>CaserSentenceCase
+xmap ,s<Space> <Plug>CaserVSentenceCase
+" native commands
+noremap ,sT g~
+noremap ,sn gu
+noremap ,sN gU
  "}}}
 
 "---------------------------------------
