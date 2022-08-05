@@ -286,7 +286,7 @@ call jetpack#end()
 "---------------------------------------
 " caw.vim "{{{
 map gc <Plug>(caw:prefix)
-nmap <C-c> <Plug>(caw:hatpos:toggle)
+" nmap <C-c> <Plug>(caw:hatpos:toggle)
 map <Space>, <Plug>(caw:hatpos:toggle)
 map ,<Space> <Plug>(caw:hatpos:toggle)
 
