@@ -178,8 +178,6 @@ vnoremap K <Nop>
 " Escaping
 nnoremap <Up> gk
 nnoremap <Down> gj
-nnoremap <Space>n gn
-nnoremap <Space>N gN
 
 " not a good approach, see these help: `c_<Tab>`, `c_<S-Tab>`, `wc`
 " (when search tab character, use '\t')
