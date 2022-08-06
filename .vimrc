@@ -115,6 +115,7 @@ nmap yp yyp
 nnoremap <Space>l <Cmd>bnext<CR>
 nnoremap <Space>h <Cmd>bprevious<CR>
 nmap <Space>0 "0p
+noremap sc ~
 nnoremap srl r<C-k>
 nnoremap srr r<C-k>
 " inoremap <C-j> <C-x>
