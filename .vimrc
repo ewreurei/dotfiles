@@ -604,20 +604,20 @@ call skkeleton#config({
 
 " vim-caser
 " via readme, and few custom:
-" | Case                                | Default Mapping |
-" | ----------------------------------- | --------------- |
-" | MixedCase or PascalCase             | ,sm  ,sp  ,sC   |
-" | camelCase                           | ,sc             |
-" | snake_case                          | ,s_  ,ss        |
-" | UPPER_CASE                          | ,su  ,sU        |
-" | Title Case                          | ,st             |
-" | Sentence case                       | ,s<Space>       |
-" | dash-case or kebab-case             | ,s-  ,sk        |
-" | Title-Dash-Case or Title-Kebab-Case | ,sK             |
-" | dot.case                            | ,s.             |
-" | tOGGLE cASE                         | ,sT             |
-" | normal lower case                   | ,sn             |
-" | NORMAL UPPER CASE                   | ,sN             |
+" |                Case                 |    Mapping    |
+" | ----------------------------------- | ------------- |
+" | MixedCase or PascalCase             | ,sm  ,sp  ,sC |
+" | camelCase                           | ,sc           |
+" | snake_case                          | ,s_  ,ss      |
+" | UPPER_CASE                          | ,su  ,sU      |
+" | Title Case                          | ,st           |
+" | Sentence case                       | ,s<Space>     |
+" | dash-case or kebab-case             | ,s-  ,sk      |
+" | Title-Dash-Case or Title-Kebab-Case | ,sK           |
+" | dot.case                            | ,s.           |
+" | tOGGLE cASE                         | ,sT           |
+" | normal lower case                   | ,sn           |
+" | NORMAL UPPER CASE                   | ,sN           |
 
 " let g:caser_prefix = ',s'
 let g:caser_no_mappings = 1
