@@ -215,7 +215,7 @@ let @j = "oJetpack '\<Esc>"
 let @w = '/ \+$'       " trailing space hunt
 let @k = "sa<saab`l~"  " when selected c-w, replace to `<C-w>`
 let @r = ":\<C-u>call getline('.') ->matchstr('[0-9a-zA-Z-_\\.]\\+\\/[0-9a-zA-Z-_\\.]\\+') ->substitute('^', 'https://github.com/', '') ->setline('.')\<Esc>"
-let @u = ":\<C-u>call getline('.') ->toupper() ->setline('.')\<Esc>"
+let @u = "VgU"
 
 " Commands
 command! Vimrc edit $MYVIMRC
