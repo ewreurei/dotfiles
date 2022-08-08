@@ -285,6 +285,7 @@ Jetpack 'zef/vim-cycle'
 Jetpack 'vim-skk/skkeleton'
 Jetpack 'arthurxavierx/vim-caser'
 Jetpack 'lambdalisue/reword.vim'
+Jetpack 'kg8m/vim-simple-align'
 call jetpack#end()
  "}}}
 
