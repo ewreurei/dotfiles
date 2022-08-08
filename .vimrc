@@ -217,6 +217,7 @@ command! Vimrc edit $MYVIMRC
 command! Wrap call s:toggle_option('wrap')
 command! Number call s:toggle_option('number')
 command! ExpandTab call s:toggle_option('expandtab')
+command! Spell call s:toggle_option('spell')
 " for testing
 command! Hoge call s:toggle_option('hoge')
 " Todo: define `:Toggle` command and wrap s:toggle_option function
