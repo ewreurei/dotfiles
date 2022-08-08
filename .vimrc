@@ -111,6 +111,7 @@ nnoremap <Space>as GVgg
 noremap + <C-a>
 noremap - <C-x>
 noremap Y y$
+noremap <Space>Y "*y$
 nmap yp yyp
 nnoremap <Space>l <Cmd>bnext<CR>
 nnoremap <Space>h <Cmd>bprevious<CR>
