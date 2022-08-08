@@ -279,6 +279,7 @@ Jetpack 'machakann/vim-textobj-delimited'
 Jetpack 'zef/vim-cycle'
 Jetpack 'vim-skk/skkeleton'
 Jetpack 'arthurxavierx/vim-caser'
+Jetpack 'lambdalisue/reword.vim'
 call jetpack#end()
  "}}}
 
