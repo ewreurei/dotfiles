@@ -137,6 +137,14 @@ vnoremap g- g<C-x>
 noremap ( [(
 noremap ) ])
 
+" cnoremap <C-p> <Up>
+" cnoremap <C-n> <Down>
+" cnoremap <Up> <C-p>
+" cnoremap <Down> <C-n>
+
+cnoremap <expr> / getcmdtype() ==# '/' ? '\/' : '/'
+cnoremap <expr> ? getcmdtype() ==# '?' ? '\?' : '?'
+
 " nohlsearch for now matching
 nnoremap <Esc><Esc> <Cmd>nohlsearch<CR>
 " highlighting again: `:h v:hlsearch`
