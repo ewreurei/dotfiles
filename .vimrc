@@ -214,14 +214,15 @@ let @j = "oJetpack '\<Esc>"
 
 " Commands
 command! Vimrc edit $MYVIMRC
-command! Wrap call s:toggle_option('wrap')
-command! Number call s:toggle_option('number')
-command! ExpandTab call s:toggle_option('expandtab')
-command! Spell call s:toggle_option('spell')
+command! -nargs=1 -complete=option Toggle call s:toggle_option('<args>')
+" toggle options by `:Toggle` "{{{
+command! Wrap      Toggle wrap
+command! Number    Toggle number
+command! ExpandTab Toggle expandtab
+command! Spell     Toggle spell
 " for testing
-command! Hoge call s:toggle_option('hoge')
-" Todo: define `:Toggle` command and wrap s:toggle_option function
-" command! Toggle call s:toggle_option('')
+command! Hoge Toggle hoge
+ "}}}
 
 function! s:toggle_option(optname)
   if exists('&' .. a:optname)
