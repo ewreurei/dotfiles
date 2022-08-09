@@ -247,6 +247,8 @@ function! s:toggle_option(optname)
   endif
 endfunction
 
+command! -range -nargs=* MdTable execute executable('mdtable') ? '<line1>,<line2>!mdtable <args>' : 'echohl WarningMsg | echo "Error: ''mdtable'' command is not found" | echohl None'
+
 " :help map-table
  "}}}
 
