@@ -248,6 +248,10 @@ function! s:toggle_option(optname)
 endfunction
 
 command! -range -nargs=* MdTable execute executable('mdtable') ? '<line1>,<line2>!mdtable <args>' : 'echohl WarningMsg | echo "Error: ''mdtable'' command is not found" | echohl None'
+" change markdown table direction
+command! -range MdLeft   silent <line1>,<line2>s/|\( \)\?-/|\1:/g | silent <line1>,<line2>s/:\( \)\?|/-\1|/g
+command! -range MdRight  silent <line1>,<line2>s/-\( \)\?|/:\1|/g | silent <line1>,<line2>s/|\( \)\?:/|\1-/g
+command! -range MdCenter silent <line1>,<line2>s/|\( \)\?-/|\1:/g | silent <line1>,<line2>s/-\( \)\?|/:\1|/g
 
 " :help map-table
  "}}}
