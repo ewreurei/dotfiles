@@ -249,9 +249,9 @@ endfunction
 
 command! -range -nargs=* MdTable execute executable('mdtable') ? '<line1>,<line2>!mdtable <args>' : 'echohl WarningMsg | echo "Error: ''mdtable'' command is not found" | echohl None'
 " change markdown table direction
-command! -range MdLeft   silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/:\( \)\?|/-\1|/ge
-command! -range MdRight  silent <line1>,<line2>s/-\( \)\?|/:\1|/ge | silent <line1>,<line2>s/|\( \)\?:/|\1-/ge
-command! -range MdCenter silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/-\( \)\?|/:\1|/ge
+command! -range MdTableLeft   silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/:\( \)\?|/-\1|/ge
+command! -range MdTableRight  silent <line1>,<line2>s/-\( \)\?|/:\1|/ge | silent <line1>,<line2>s/|\( \)\?:/|\1-/ge
+command! -range MdTableCenter silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/-\( \)\?|/:\1|/ge
 
 " :help map-table
  "}}}
