@@ -223,7 +223,7 @@ let @j = "oJetpack '\<Esc>"
 let @w = '/ \+$'       " trailing space hunt
 let @k = "sa<saab`l~"  " when selected c-w, replace to `<C-w>`
 let @r = ":\<C-u>call getline('.') ->matchstr('[0-9a-zA-Z-_\\.]\\+\\/[0-9a-zA-Z-_\\.]\\+') ->substitute('^', 'https://github.com/', '') ->setline('.')\<Esc>"
-let @u = "VgU"
+let @u = "VgU"         " to upper case this line
 let @p = ":\<C-u>silent '<,'>s/-\\([-:]\\)|/\\1 |/ge | silent '<,'>s/|\\([-:]\\)-/| \\1/ge\<CR>"  " in markdown table, insert space between dash and pipe
 
 " Commands
