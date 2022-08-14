@@ -258,7 +258,9 @@ command! -range MdTableCenter silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent
 " via https://gist.github.com/tyru/845984 https://hauleth.dev/post/writing-vim-plugin/
 command! -nargs=+ -complete=command Capture call s:cmd_newwin(<q-mods>, <q-args>)
 function! s:cmd_newwin(mods, cmd)
+  let num = &l:number | setlocal nonumber
   let output = split(execute(a:cmd), '\n')
+  let &l:number = num
   execute a:mods . ' new'
   setlocal nobuflisted noswapfile buftype=nofile bufhidden=delete
   call setline(1, output)
