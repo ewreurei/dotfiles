@@ -715,7 +715,7 @@ colorscheme everforest
 " Misc
 "---------------------------------------
 " Some FAQ for me "{{{
-" Q. How do I jump to latest/older changed position?
+" Q. How do I jump to newer/older changed position?
 " A. Can use `g;` and `g,`
 " Q. When will update jumplist? (I care that when use ctrl-o)
 " A. `:h jump-motions`
@@ -727,7 +727,7 @@ colorscheme everforest
 " Q. Can't input specific symbols like ・, →, ←, etc
 " A. Use digraph. Input <C-k> in insert mode, and type `.6`, `->`, `<-`.
 "  See `digraph.txt`, and for learning digraph keys, `ga` is usefull
-" Q. I want default key-mappings list (with simply description)
+" Q. I want to see default key-mappings list (with simply description)
 " A. See `index.txt`, that is mappings overview
  "}}}
 
