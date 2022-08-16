@@ -255,7 +255,7 @@ command! -range MdTableLeft   silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent
 command! -range MdTableRight  silent <line1>,<line2>s/-\( \)\?|/:\1|/ge | silent <line1>,<line2>s/|\( \)\?:/|\1-/ge
 command! -range MdTableCenter silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/-\( \)\?|/:\1|/ge
 
-" via https://gist.github.com/tyru/845984 https://hauleth.dev/post/writing-vim-plugin/
+" via https://gist.github.com/tyru/845984 and https://hauleth.dev/post/writing-vim-plugin/
 command! -nargs=+ -complete=command Capture call s:cmd_newwin(<q-mods>, <q-args>)
 function! s:cmd_newwin(mods, cmd)
   let num = &l:number | setlocal nonumber
