@@ -218,6 +218,9 @@ function! s:put_foldmarker(foldclose_p) "{{{
 endfunction
 "}}}
 
+" for specific macros
+noremap <CR> @@j
+
 " macros (:h expr-quote)
 let @j = "oJetpack '\<Esc>"
 let @w = '/ \+$'       " trailing space hunt
