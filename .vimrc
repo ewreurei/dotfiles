@@ -269,6 +269,8 @@ function! s:cmd_newwin(mods, cmd)
   call setline(1, output)
 endfunction
 
+command! MarkdownToc Capture g/#\+ /print
+
 " :help map-table
  "}}}
 
