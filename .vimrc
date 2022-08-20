@@ -117,13 +117,7 @@ nmap yp yyp
 nnoremap <Space>l <Cmd>bnext<CR>
 nnoremap <Space>h <Cmd>bprevious<CR>
 nmap <Space>0 "0p
-noremap sc ~
 nnoremap @; @:
-nnoremap srl r<C-k>
-nnoremap srr r<C-k>
-" inoremap <C-j> <C-x>
-noremap s; :<C-u>q
-noremap sw :<C-u>w
 " Say thanks to clever-f :-)
 nnoremap ; :
 " for operator-replace
@@ -150,10 +144,11 @@ cnoremap <expr> ? getcmdtype() ==# '?' ? '\?' : '?'
 nnoremap <Esc><Esc> <Cmd>nohlsearch<CR>
 " highlighting again: `:h v:hlsearch`
 nnoremap <Space>/ <Cmd>let &hlsearch = &hlsearch<CR>
+
 " for sandwich
 noremap s <Nop>
 noremap S s
-" s-prefixed "{{{
+" s-prefix "{{{
 " nnoremap sj <C-e>
 " nnoremap sk <C-y>
 
@@ -170,6 +165,13 @@ nmap sk <C-y><SID>s
 nnoremap <script> <SID>sj <C-e><SID>s
 nnoremap <script> <SID>sk <C-y><SID>s
 " nmap <SID>s <Nop>
+
+" some mapping
+noremap sc ~
+nnoremap srl r<C-k>
+nnoremap srr r<C-k>
+noremap s; :<C-u>q
+noremap sw :<C-u>w
  "}}}
 
 nmap <Space>j <C-e>j<SID><Space>
