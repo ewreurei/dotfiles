@@ -126,8 +126,8 @@ nnoremap <C-r> R
 " That is hard to type but can use `dh` or `hx` instead, so
 nnoremap X "_x
 
-vnoremap g+ g<C-a>
-vnoremap g- g<C-x>
+xnoremap g+ g<C-a>
+xnoremap g- g<C-x>
 
 noremap ( [(
 noremap ) ])
@@ -183,11 +183,11 @@ nnoremap <script> <SID><Space>k <C-y>k<SID><Space>
 " (t9md/vim-textmanip is better, maybe)
 nnoremap <M-j> <Cmd>move .+1<CR>
 nnoremap <M-k> <Cmd>move .-2<CR>
-vnoremap <M-j> :move '>+1<CR>gv
-vnoremap <M-k> :move '<-2<CR>gv
+xnoremap <M-j> :move '>+1<CR>gv
+xnoremap <M-k> :move '<-2<CR>gv
 " avoid accidental
-vnoremap J <Nop>
-vnoremap K <Nop>
+xnoremap J <Nop>
+xnoremap K <Nop>
 
 " Escaping
 nnoremap <Up> gk
@@ -408,7 +408,7 @@ let g:clever_f_mark_direct = 1
 
 " open-browser
 nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
+xmap gx <Plug>(openbrowser-smart-search)
 let g:openbrowser_default_search = 'duckduckgo'
 " In official, the option name is `-private-window` but Windows-style option is
 " too strange, so I don't want to be surprised by that (and `--` is looks work, that is maybe intentional)
@@ -491,10 +491,10 @@ nmap sF <Plug>(fmap-backward-f)
 nmap st <Plug>(fmap-forward-t)
 nmap sT <Plug>(fmap-backward-t)
 
-vmap sf <Plug>(fmap-forward-f)
-vmap sF <Plug>(fmap-backward-f)
-vmap st <Plug>(fmap-forward-t)
-vmap sT <Plug>(fmap-backward-t)
+xmap sf <Plug>(fmap-forward-f)
+xmap sF <Plug>(fmap-backward-f)
+xmap st <Plug>(fmap-forward-t)
+xmap sT <Plug>(fmap-backward-t)
 
 omap sf <Plug>(fmap-forward-f)
 omap sF <Plug>(fmap-backward-f)
