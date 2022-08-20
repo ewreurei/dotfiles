@@ -235,7 +235,7 @@ let @p = ":\<C-u>silent '<,'>s/-\\([-:]\\)|/\\1 |/ge | silent '<,'>s/|\\([-:]\\)
 " Commands
 command! Vimrc edit $MYVIMRC
 command! -nargs=1 -complete=option Toggle call s:toggle_option('<args>')
-" toggle options by `:Toggle` "{{{
+" toggle options by option name command, using `:Toggle` "{{{
 command! Wrap      Toggle wrap
 command! Number    Toggle number
 command! ExpandTab Toggle expandtab
