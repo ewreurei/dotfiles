@@ -71,7 +71,8 @@ endif
 "---------------------------------------
 " Mapping
 "---------------------------------------
-" let g:mapleader = ',' "{{{
+" :help map-table "{{{
+" let g:mapleader = ','
 " Reload vimrc: https://vim-jp.org/vim-users-jp/2009/09/18/Hack-74.html
 nnoremap <silent> <Space>rr <Cmd>source $MYVIMRC<CR><Cmd>nohlsearch<CR>
 
@@ -271,7 +272,6 @@ endfunction
 
 command! MarkdownToc Capture g/#\+ /print
 
-" :help map-table
  "}}}
 
 "---------------------------------------
