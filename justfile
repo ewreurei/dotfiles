@@ -1,8 +1,14 @@
-# Note: This file mainly used on windows
-alias d := deploy
+# Note: This file mainly used on windows, and need casey/just to use
 
 # This option added from v1.20, see: https://github.com/casey/just/blob/master/CHANGELOG.md#120---2022-5-31
 set windows-shell := ["cmd", "/c"]
+
+alias d := deploy
+
+# variables
+sudo := if os() == "windows" { "sudo " } else { "" }
+deploy_cmd := sudo + "dotter deploy"
+dry_cmd := deploy_cmd + " -d"
 
 # Listiong recipes
 _default:
@@ -10,11 +16,11 @@ _default:
 
 # Deploy
 deploy:
-    sudo dotter deploy
+    {{ deploy_cmd }}
 
 # Dry run deploy
 dry:
-    sudo dotter deploy -d
+    {{ dry_cmd }}
 
 # Init on windows (make some symlinks)
 init:
