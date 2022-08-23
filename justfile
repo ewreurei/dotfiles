@@ -2,7 +2,6 @@
 
 # This option added from v1.20, see: https://github.com/casey/just/blob/master/CHANGELOG.md#120---2022-5-31
 set windows-shell := ["cmd", "/c"]
-
 alias d := deploy
 
 # variables
