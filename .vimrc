@@ -272,7 +272,16 @@ function! s:cmd_newwin(mods, cmd)
   call setline(1, output)
 endfunction
 
-command! MarkdownToc Capture g/#\+ /print
+" command! MarkdownHeaderList Capture g/#\+ /print
+command! MarkdownToc call s:markdowntoc()
+function! s:markdowntoc()
+  Capture g/#\+ / print
+  silent %s/#\zs /- /
+  silent %s/^#//
+  silent %s/#/\t/ge
+  " call append('0', split("## Table of Contents\n\n", '\n'))
+  call append('0', "## Table of Contents")
+endfunction
 
  "}}}
 
