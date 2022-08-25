@@ -272,10 +272,10 @@ function! s:cmd_newwin(mods, cmd)
   call setline(1, output)
 endfunction
 
-" command! MarkdownHeaderList Capture g/#\+ /print
+" command! MarkdownHeaderList Capture g/^#\+ /print
 command! MarkdownToc call s:markdowntoc()
 function! s:markdowntoc()
-  Capture g/#\+ / print
+  Capture g/^#\+ / print
   silent %s/#\zs /- /
   silent %s/^#//
   silent %s/#/\t/ge
