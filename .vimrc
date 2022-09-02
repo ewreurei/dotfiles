@@ -283,6 +283,8 @@ function! s:markdowntoc()
   call append('0', "## Table of Contents")
 endfunction
 
+" command! Time echo strftime("%Y/%m/%d")
+command! TimeStamp put =strftime('%Y/%m/%d')
  "}}}
 
 "---------------------------------------
