@@ -99,13 +99,13 @@ nnoremap U <C-r>
 nnoremap <Space>w <C-w>
 noremap <Space>y "*y
 noremap <Space>p "*p
-nnoremap ]<Space> <Cmd>call append(expand('.'), '')<CR>
+nnoremap ]<Space> <Cmd>call append('.', '')<CR>
 nnoremap [<Space> <Cmd>call append((line('.') - 1), '')<CR>
  "}}}
 
 nnoremap <Space> <Nop>
 " https://vim-jp.org/vim-users-jp/2009/08/15/Hack-57.html
-nnoremap <Space><CR> <Cmd>call append(expand('.'), '')<CR>
+nnoremap <Space><CR> <Cmd>call append('.', '')<CR>
 nnoremap <Space>s <C-v>
 nnoremap <Space>ac <Cmd>%y *<CR>
 nnoremap <Space>as GVgg
