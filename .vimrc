@@ -276,6 +276,11 @@ function! s:cmd_newwin(mods, cmd)
   call setline(1, output)
 endfunction
 
+" scripting sandbox (execute current line as a command)
+nnoremap @<CR> <Cmd>execute getline('.')<CR>
+nnoremap @<Space> <Cmd>Scratch<CR>
+command! Scratch new | setlocal nobuflisted noswapfile buftype=nofile bufhidden=delete
+
 " command! MarkdownHeaderList Capture g/^#\+ /print
 command! MarkdownToc call s:markdowntoc()
 function! s:markdowntoc()
