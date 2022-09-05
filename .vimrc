@@ -222,7 +222,7 @@ endfunction
 "}}}
 
 " for specific macros
-noremap <CR> @@j
+noremap <expr> <CR> getcmdwintype() ==# '' ? '@@j' : '<CR>'
 
 " macros (:h expr-quote)
 let @j = "oJetpack '\<Esc>"
