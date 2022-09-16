@@ -49,6 +49,7 @@ augroup FileTypeSettings
   autocmd FileType markdown setlocal noexpandtab
   autocmd FileType markdown setlocal foldmethod=marker foldmarker=<details>,</details>
   autocmd FileType gitcommit setlocal spell
+  autocmd FileType dosbatch setlocal noexpandtab
 augroup END
 
 " Startup time
