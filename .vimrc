@@ -295,6 +295,7 @@ endfunction
 
 " command! Time echo strftime("%Y/%m/%d")
 command! TimeStamp put =strftime('%Y/%m/%d')
+command! UnixTimeToDate echo strftime('%Y/%m/%d %H:%M:%S', expand('<cword>'))
  "}}}
 
 "---------------------------------------
