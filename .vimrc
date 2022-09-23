@@ -344,6 +344,7 @@ Jetpack 'vim-skk/skkeleton'
 Jetpack 'arthurxavierx/vim-caser'
 Jetpack 'lambdalisue/reword.vim'
 Jetpack 'kg8m/vim-simple-align'
+Jetpack 'lambdalisue/readablefold.vim'
 call jetpack#end()
  "}}}
 
