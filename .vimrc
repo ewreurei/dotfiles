@@ -297,6 +297,8 @@ endfunction
 " command! Time echo strftime("%Y/%m/%d")
 command! TimeStamp put =strftime('%Y/%m/%d')
 command! UnixTimeToDate echo strftime('%Y/%m/%d %H:%M:%S', expand('<cword>'))
+" :h sub-replace-expression :h submatch()
+command! -range BrowserBookmarkDateFormat <line1>,<line2>s;\(ADD_DATE\|LAST_MODIFIED\)="\zs[0-9]\+\ze";\=strftime('%Y/%m/%d %H:%M:%S', submatch(0));ge
  "}}}
 
 "---------------------------------------
