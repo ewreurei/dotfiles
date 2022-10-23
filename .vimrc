@@ -501,12 +501,14 @@ map <C-k> <Plug>(edgemotion-k)
 
 " glance-vim
 let g:glance#markdown_html = v:true
+let g:glance#markdown_linkify = v:true
 let g:glance#server_port = 1111
+let g:glance#server_open = v:false
 command! Prev call s:prev_in_browser()
 
 function! s:prev_in_browser()
   Glance
-  OpenBrowser localhost:1111
+  silent OpenBrowser localhost:1111
 endfunction
 
 " vim-fmap {{{
