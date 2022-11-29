@@ -265,11 +265,12 @@ function! s:toggle_option(optname)
 endfunction
 
 command! -range -nargs=* MdTable execute executable('mdtable') ? '<line1>,<line2>!mdtable <args>' : 'echohl WarningMsg | echo "Error: ''mdtable'' command is not found" | echohl None'
-command! -range          UnMdTable silent <line1>,<line2>s/^| *//ge | silent <line1>,<line2>s/ *|$//ge | silent <line1>,<line2>s/ *| */,/ge | silent <line1>,<line2>s/[-,:]\+\n//ge
+command! -range          UnMdTable silent keeppat <line1>,<line2>s/^| *//ge | silent keeppat <line1>,<line2>s/ *|$//ge
+                                \ | silent keeppat <line1>,<line2>s/ *| */,/ge | silent keeppat <line1>,<line2>s/[-,:]\+\n//ge
 " change markdown table direction
-command! -range MdTableLeft   silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/:\( \)\?|/-\1|/ge
-command! -range MdTableRight  silent <line1>,<line2>s/-\( \)\?|/:\1|/ge | silent <line1>,<line2>s/|\( \)\?:/|\1-/ge
-command! -range MdTableCenter silent <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent <line1>,<line2>s/-\( \)\?|/:\1|/ge
+command! -range MdTableLeft   silent keeppat <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent keeppat <line1>,<line2>s/:\( \)\?|/-\1|/ge
+command! -range MdTableRight  silent keeppat <line1>,<line2>s/-\( \)\?|/:\1|/ge | silent keeppat <line1>,<line2>s/|\( \)\?:/|\1-/ge
+command! -range MdTableCenter silent keeppat <line1>,<line2>s/|\( \)\?-/|\1:/ge | silent keeppat <line1>,<line2>s/-\( \)\?|/:\1|/ge
 
 " via https://gist.github.com/tyru/845984 and https://hauleth.dev/post/writing-vim-plugin/
 command! -nargs=+ -complete=command Capture call s:cmd_newwin(<q-mods>, <q-args>)
