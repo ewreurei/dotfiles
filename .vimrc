@@ -23,6 +23,7 @@ set foldmethod=marker
 set shortmess-=S
 " set visualbell
 set hidden
+set termguicolors
 
 set ignorecase
 set smartcase
@@ -289,7 +290,7 @@ command! Scratch new | setlocal nobuflisted noswapfile buftype=nofile bufhidden=
 " command! MarkdownHeaderList Capture g/^#\+ /print
 command! MarkdownToc call s:markdowntoc()
 function! s:markdowntoc()
-  Capture g/^#\+ / print
+  Capture g/^#\+ /print
   silent %s/#\zs /- /
   silent %s/^#//
   silent %s/#/\t/ge
@@ -739,9 +740,6 @@ noremap ,sN gU
 " Colorscheme
 "---------------------------------------
 " Copy-pasted from `:h everforest-usage` "{{{
-if has('termguicolors')
-  set termguicolors
-endif
 set background=dark
 let g:everforest_background = 'hard'
 let g:everforest_disable_italic_comment = 1
@@ -772,6 +770,7 @@ colorscheme everforest
 " Todo "{{{
 " - install lsp plugins
 " - install snippet plugin & configuring them
+" - lexima rules manage by variable and single function call
  "}}}
 
 " Scouter: https://vim-jp.org/vim-users-jp/2009/07/10/Hack-39.html "{{{
