@@ -407,17 +407,26 @@ let g:lightline = {
 call lexima#add_rule({'char': '<', 'input_after': '>'})
 call lexima#add_rule({'char': '>', 'at': '\%#>', 'leave': 1})
 call lexima#add_rule({'char': '<BS>', 'at': '<\%#>', 'delete': 1})
-" When writing specific language, disable that rule
+" When writing specific programing language, disable that rule
 call lexima#add_rule({'char': '<', 'filetype': 'haskell'})
 " Easier leaving at `<C-w|>` after `<C-w>`| by `
 call lexima#add_rule({'char': '`', 'at': '\%#>`', 'leave': 2})
-
-" single quote is still not easy to type for me (in JIS keyboard), so just in case mapping
-call lexima#add_rule({'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': ''''})
-" Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
-call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'})
 " markdown link by 'mdl'
 call lexima#add_rule({'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'})
+
+" Easier '' (single quote is still not easy to type for me (in JIS keyboard), so just in case mapping)
+call lexima#add_rule({'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': '''', 'mode': 'ic'})
+" Easier '.' (used in writing vim script)
+call lexima#add_rule({'char': '.', 'at': ';\%#', 'input': '<BS>''.''', 'mode': 'ic'})
+" Easier ()
+call lexima#add_rule({'char': 'b', 'at': ';\%#', 'input': '<BS>(', 'input_after': ')', 'mode': 'ic'})
+
+" Above's leaving settings (in command line, ctrl-g... is don't need)
+" Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
+call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'})
+call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><Right>', 'mode': 'c'})
+call lexima#add_rule({'char': 'b', 'at': ';\%#)',  'input': '<BS><C-g>U<Right>'})
+call lexima#add_rule({'char': 'b', 'at': ';\%#)',  'input': '<BS><Right>', 'mode': 'c'})
 
 " Full width
 call lexima#add_rule({'char': '（', 'input_after': '）'})
