@@ -48,8 +48,11 @@ augroup FileTypeSettings
   autocmd!
   autocmd FileType markdown setlocal noexpandtab
   autocmd FileType markdown setlocal foldmethod=marker foldmarker=<details>,</details>
-  autocmd FileType gitcommit setlocal spell
+  autocmd FileType gitcommit setlocal spell formatoptions+=tcqmM
   autocmd FileType dosbatch setlocal noexpandtab fenc=cp932
+  autocmd FileType vim setlocal ff=unix tabstop=2 shiftwidth=2 softtabstop=2
+  " ft設定をafter/filetypeにぶち込めばいい話ではあるんだろうけど面倒...
+  " autocmd SourcePost * doautocmd FileTypeSettings FileType
 augroup END
 
 " Startup time
