@@ -78,7 +78,7 @@ endif
 " :help map-table "{{{
 " let g:mapleader = ','
 " Reload vimrc: https://vim-jp.org/vim-users-jp/2009/09/18/Hack-74.html
-nnoremap <silent> <Space>rr <Cmd>source $MYVIMRC<CR><Cmd>nohlsearch<CR>
+nnoremap <silent> <Space>rr <Cmd>source $MYVIMRC \| nohlsearch<CR>
 
 " For more scrolling on K,J "{{{
 nnoremap gk H
