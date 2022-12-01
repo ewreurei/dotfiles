@@ -9,7 +9,7 @@ sudo := if os() == "windows" { "sudo " } else { "" }
 deploy_cmd := sudo + "dotter deploy"
 dry_cmd := deploy_cmd + " -d"
 
-# Listiong recipes
+# Listing recipes
 _default:
     @just --list
 
