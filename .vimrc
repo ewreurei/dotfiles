@@ -380,18 +380,19 @@ let g:winresizer_start_key = '<Space>e'
 call operator#sandwich#set('delete', 'all', 'hi_duration', 175)
 
 " recipe initialize
-let g:sandwich#recipes = deepcopy(g:sandwich#default_recipes)
+let s:recipes = deepcopy(g:sandwich#default_recipes)
+let g:sandwich#recipes = s:recipes " `:h list-identity`
 " To insert single quote by `si`
-let g:sandwich#recipes += [{'buns': ['''', ''''], 'input': ['si'], 'quoteescape': 1}]
+let s:recipes += [{'buns': ['''', ''''], 'input': ['si'], 'quoteescape': 1}]
 " markdown link
-let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['mdl'], 'quoteescape': 1}]
-let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['mdp'], 'quoteescape': 1, 'command': ['normal! "*P']}]
+let s:recipes += [{'buns': ['[', ']()'], 'input': ['mdl'], 'quoteescape': 1}]
+let s:recipes += [{'buns': ['[', ']()'], 'input': ['mdp'], 'quoteescape': 1, 'command': ['normal! "*P']}]
 
 " 日本語文章用（どのぐらい使うのかわからないけど一応）
-let g:sandwich#recipes += [{'buns': ['（', '）'], 'input': ['mr'],  'nesting': 1}] " fullwidth maru
-let g:sandwich#recipes += [{'buns': ['「', '」'], 'input': ['kg'],  'nesting': 1}] " kagi
-let g:sandwich#recipes += [{'buns': ['『', '』'], 'input': ['nkg'], 'nesting': 1}] " nijuu kagi
-let g:sandwich#recipes += [{'buns': ['【', '】'], 'input': ['sm'],  'nesting': 1}] " sumi
+let s:recipes += [{'buns': ['（', '）'], 'input': ['mr'],  'nesting': 1}] " fullwidth maru
+let s:recipes += [{'buns': ['「', '」'], 'input': ['kg'],  'nesting': 1}] " kagi
+let s:recipes += [{'buns': ['『', '』'], 'input': ['nkg'], 'nesting': 1}] " nijuu kagi
+let s:recipes += [{'buns': ['【', '】'], 'input': ['sm'],  'nesting': 1}] " sumi
  "}}}
 
 " lightline
