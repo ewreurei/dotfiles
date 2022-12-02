@@ -388,10 +388,10 @@ let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['mdl'], 'quoteescape
 let g:sandwich#recipes += [{'buns': ['[', ']()'], 'input': ['mdp'], 'quoteescape': 1, 'command': ['normal! "*P']}]
 
 " 日本語文章用（どのぐらい使うのかわからないけど一応）
-let g:sandwich#recipes += [{'buns': ['（', '）'], 'input': ['mr']}] " fullwidth maru
-let g:sandwich#recipes += [{'buns': ['「', '」'], 'input': ['kg']}] " kagi
-let g:sandwich#recipes += [{'buns': ['『', '』'], 'input': ['nkg']}] " nijuu kagi
-let g:sandwich#recipes += [{'buns': ['【', '】'], 'input': ['sm']}] " sumi
+let g:sandwich#recipes += [{'buns': ['（', '）'], 'input': ['mr'],  'nesting': 1}] " fullwidth maru
+let g:sandwich#recipes += [{'buns': ['「', '」'], 'input': ['kg'],  'nesting': 1}] " kagi
+let g:sandwich#recipes += [{'buns': ['『', '』'], 'input': ['nkg'], 'nesting': 1}] " nijuu kagi
+let g:sandwich#recipes += [{'buns': ['【', '】'], 'input': ['sm'],  'nesting': 1}] " sumi
  "}}}
 
 " lightline
