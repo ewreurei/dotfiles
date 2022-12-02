@@ -387,6 +387,9 @@ let s:recipes += [{'buns': ['''', ''''], 'input': ['si'], 'quoteescape': 1}]
 " markdown link
 let s:recipes += [{'buns': ['[', ']()'], 'input': ['mdl'], 'quoteescape': 1}]
 let s:recipes += [{'buns': ['[', ']()'], 'input': ['mdp'], 'quoteescape': 1, 'command': ['normal! "*P']}]
+" markdown codeblock
+let s:recipes += [{'buns': ['```', '```'], 'input': ['mdc'], 'motionwise': ['line']}]
+let s:recipes += [{'buns': ['', ''],       'input': ['mdc'], 'motionwise': ['char', 'block']}]
 
 " 日本語文章用（どのぐらい使うのかわからないけど一応）
 let s:recipes += [{'buns': ['（', '）'], 'input': ['mr'],  'nesting': 1}] " fullwidth maru
