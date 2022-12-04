@@ -407,42 +407,56 @@ let g:lightline = {
   \ }
 
 " lexima "{{{
-" `\%#` is cursor place holder, see `:h lexima-rules-at`
-call lexima#add_rule({'char': '<', 'input_after': '>'})
-call lexima#add_rule({'char': '>', 'at': '\%#>', 'leave': 1})
-call lexima#add_rule({'char': '<BS>', 'at': '<\%#>', 'delete': 1})
-" When writing specific programing language, disable that rule
-call lexima#add_rule({'char': '<', 'filetype': 'haskell'})
-" Easier leaving at `<C-w|>` after `<C-w>`| by `
-call lexima#add_rule({'char': '`', 'at': '\%#>`', 'leave': 2})
-" markdown link by 'mdl'
-call lexima#add_rule({'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'})
+let s:rules = []
+let s:rules = [
+	"\   `\%#` is cursor place holder, see `:h lexima-rules-at`
+  \   {'char': '<', 'input_after': '>'},
+  \   {'char': '>', 'at': '\%#>', 'leave': 1},
+  \   {'char': '<BS>', 'at': '<\%#>', 'delete': 1},
+	"\   When writing specific programing language, disable that rule
+  \   {'char': '<', 'filetype': 'haskell'},
+	"\   Easier leaving at `<C-w|>` after `<C-w>`| by `
+  \   {'char': '`', 'at': '\%#>`', 'leave': 2},
+	"\   markdown link by 'mdl'
+  \   {'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'},
+  \ ]
 
-" Easier '' (single quote is still not easy to type for me (in JIS keyboard), so just in case mapping)
-call lexima#add_rule({'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': '''', 'mode': 'ic'})
-" Easier '.' (used in writing vim script)
-call lexima#add_rule({'char': '.', 'at': ';\%#', 'input': '<BS>''.''', 'mode': 'ic'})
-" Easier ()
-call lexima#add_rule({'char': 'b', 'at': ';\%#', 'input': '<BS>(', 'input_after': ')', 'mode': 'ic'})
+let s:rules = [
+	"\   Easier '' (single quote is still not easy to type for me (in JIS keyboard), so just in case mapping)
+  \   {'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': '''', 'mode': 'ic'},
+	"\   Easier '.' (used in writing vim script)
+  \   {'char': '.', 'at': ';\%#', 'input': '<BS>''.''', 'mode': 'ic'},
+	"\   Easier ()
+  \   {'char': 'b', 'at': ';\%#', 'input': '<BS>(', 'input_after': ')', 'mode': 'ic'},
+  \ ]
 
-" Above's leaving settings (in command line, ctrl-g... is don't need)
-" Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
-call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'})
-call lexima#add_rule({'char': ',', 'at': ',\%#''', 'input': '<BS><Right>', 'mode': 'c'})
-call lexima#add_rule({'char': 'b', 'at': ';\%#)',  'input': '<BS><C-g>U<Right>'})
-call lexima#add_rule({'char': 'b', 'at': ';\%#)',  'input': '<BS><Right>', 'mode': 'c'})
+let s:rules = [
+	"\   Above's leaving settings (in command line, ctrl-g... is don't need)
+	"\   Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
+  \   {'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'},
+  \   {'char': ',', 'at': ',\%#''', 'input': '<BS><Right>', 'mode': 'c'},
+  \   {'char': 'b', 'at': ';\%#)',  'input': '<BS><C-g>U<Right>'},
+  \   {'char': 'b', 'at': ';\%#)',  'input': '<BS><Right>', 'mode': 'c'},
+  \ ]
 
-" Full width
-call lexima#add_rule({'char': '（', 'input_after': '）'})
-call lexima#add_rule({'char': '）', 'at': '\%#）', 'leave': 1})
-call lexima#add_rule({'char': '<BS>', 'at': '（\%#）', 'delete': 1})
-call lexima#add_rule({'char': '「', 'input_after': '」'})
-call lexima#add_rule({'char': '」', 'at': '\%#」', 'leave': 1})
-call lexima#add_rule({'char': '<BS>', 'at': '「\%#」', 'delete': 1})
+let s:rules = [
+	"\   Full width
+  \   {'char': '（', 'input_after': '）'},
+  \   {'char': '）', 'at': '\%#）', 'leave': 1},
+  \   {'char': '<BS>', 'at': '（\%#）', 'delete': 1},
+  \   {'char': '「', 'input_after': '」'},
+  \   {'char': '」', 'at': '\%#」', 'leave': 1},
+  \   {'char': '<BS>', 'at': '「\%#」', 'delete': 1},
+  \ ]
 
+for s:rule in s:rules
+  call lexima#add_rule(s:rule)
+endfor
 " experimental (problem: if use first line, can't put `<<>>` easily so have to use dot-repeat)
-" call lexima#add_rule({'char': '<', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'})
-" call lexima#add_rule({'char': '>', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'})
+" let s:rules = [
+"  \   {'char': '<', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'},
+"  \   {'char': '>', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'},
+"  \ ]
  "}}}
 
 " clever-f
@@ -790,7 +804,6 @@ colorscheme everforest
 " Todo "{{{
 " - install lsp plugins
 " - install snippet plugin & configuring them
-" - lexima rules manage by variable and single function call
  "}}}
 
 " Scouter: https://vim-jp.org/vim-users-jp/2009/07/10/Hack-39.html "{{{
