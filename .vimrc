@@ -147,8 +147,8 @@ cnoremap <expr> ? getcmdtype() ==# '?' ? '\?' : '?'
 
 " nohlsearch for now matching
 nnoremap <Esc><Esc> <Cmd>nohlsearch<CR>
-" highlighting again: `:h v:hlsearch`
-nnoremap <Space>/ <Cmd>let &hlsearch = &hlsearch<CR>
+" toggle highlighting: `:h v:hlsearch`
+nnoremap <expr> <Space>/ '<Cmd>let v:hlsearch = ' . (v:hlsearch ? '0' : '1') . '<CR>'
 
 " for sandwich
 noremap s <Nop>
