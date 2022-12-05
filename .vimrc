@@ -409,30 +409,30 @@ let g:lightline = {
 " lexima "{{{
 let s:rules = []
 let s:rules = [
-	"\   `\%#` is cursor place holder, see `:h lexima-rules-at`
+  "\   `\%#` is cursor place holder, see `:h lexima-rules-at`
   \   {'char': '<', 'input_after': '>'},
   \   {'char': '>', 'at': '\%#>', 'leave': 1},
   \   {'char': '<BS>', 'at': '<\%#>', 'delete': 1},
-	"\   When writing specific programing language, disable that rule
+  "\   When writing specific programing language, disable that rule
   \   {'char': '<', 'filetype': 'haskell'},
-	"\   Easier leaving at `<C-w|>` after `<C-w>`| by `
+  "\   Easier leaving at `<C-w|>` after `<C-w>`| by `
   \   {'char': '`', 'at': '\%#>`', 'leave': 2},
-	"\   markdown link by 'mdl'
+  "\   markdown link by 'mdl'
   \   {'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'},
   \ ]
 
 let s:rules = [
-	"\   Easier '' (single quote is still not easy to type for me (in JIS keyboard), so just in case mapping)
+  "\   Easier '' (single quote is still not easy to type for me (in JIS keyboard), so just in case mapping)
   \   {'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': '''', 'mode': 'ic'},
-	"\   Easier '.' (used in writing vim script)
+  "\   Easier '.' (used in writing vim script)
   \   {'char': '.', 'at': ';\%#', 'input': '<BS>''.''', 'mode': 'ic'},
-	"\   Easier ()
+  "\   Easier ()
   \   {'char': 'b', 'at': ';\%#', 'input': '<BS>(', 'input_after': ')', 'mode': 'ic'},
   \ ]
 
 let s:rules = [
-	"\   Above's leaving settings (in command line, ctrl-g... is don't need)
-	"\   Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
+  "\   Above's leaving settings (in command line, ctrl-g... is don't need)
+  "\   Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
   \   {'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'},
   \   {'char': ',', 'at': ',\%#''', 'input': '<BS><Right>', 'mode': 'c'},
   \   {'char': 'b', 'at': ';\%#)',  'input': '<BS><C-g>U<Right>'},
