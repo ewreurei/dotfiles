@@ -407,7 +407,7 @@ let g:lightline = {
 
 " lexima "{{{
 let s:rules = []
-let s:rules = [
+let s:rules += [
   "\   `\%#` is cursor place holder, see `:h lexima-rules-at`
   \   {'char': '<', 'input_after': '>'},
   \   {'char': '>', 'at': '\%#>', 'leave': 1},
@@ -420,7 +420,7 @@ let s:rules = [
   \   {'char': 'l', 'at': 'md\%#', 'input': '<BS><BS>[', 'input_after': ']()', 'filetype': 'markdown'},
   \ ]
 
-let s:rules = [
+let s:rules += [
   "\   Easier '' (single quote is still not easy to type for me (in JIS keyboard), so just in case mapping)
   \   {'char': ',', 'at': ',\%#', 'input': '<BS>''', 'input_after': '''', 'mode': 'ic'},
   "\   Easier '.' (used in writing vim script)
@@ -429,7 +429,7 @@ let s:rules = [
   \   {'char': 'b', 'at': ';\%#', 'input': '<BS>(', 'input_after': ')', 'mode': 'ic'},
   \ ]
 
-let s:rules = [
+let s:rules += [
   "\   Above's leaving settings (in command line, ctrl-g... is don't need)
   "\   Note: `'leave': 1` doesn't work as expected, see `:h lexima-rules-leave`
   \   {'char': ',', 'at': ',\%#''', 'input': '<BS><C-g>U<Right>'},
@@ -438,7 +438,7 @@ let s:rules = [
   \   {'char': 'b', 'at': ';\%#)',  'input': '<BS><Right>', 'mode': 'c'},
   \ ]
 
-let s:rules = [
+let s:rules += [
   "\   Full width
   \   {'char': '（', 'input_after': '）'},
   \   {'char': '）', 'at': '\%#）', 'leave': 1},
@@ -452,7 +452,7 @@ for s:rule in s:rules
   call lexima#add_rule(s:rule)
 endfor
 " experimental (problem: if use first line, can't put `<<>>` easily so have to use dot-repeat)
-" let s:rules = [
+" let s:rules += [
 "  \   {'char': '<', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'},
 "  \   {'char': '>', 'at': '<\%#', 'input': '<BS><', 'input_after': '>'},
 "  \ ]
