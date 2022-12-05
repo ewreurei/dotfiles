@@ -440,7 +440,7 @@ let s:rules = [
   \ ]
 
 let s:rules = [
-	"\   Full width
+  "\   Full width
   \   {'char': '（', 'input_after': '）'},
   \   {'char': '）', 'at': '\%#）', 'leave': 1},
   \   {'char': '<BS>', 'at': '（\%#）', 'delete': 1},
