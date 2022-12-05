@@ -368,7 +368,6 @@ call jetpack#end()
 map gc <Plug>(caw:prefix)
 " nmap <C-c> <Plug>(caw:hatpos:toggle)
 map <Space>, <Plug>(caw:hatpos:toggle)
-map ,<Space> <Plug>(caw:hatpos:toggle)
 
 " winresizer
 let g:winresizer_vert_resize = 1
