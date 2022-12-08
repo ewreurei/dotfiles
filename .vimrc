@@ -206,6 +206,18 @@ set wildcharm=<C-z>
 cnoremap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<C-z>'
 cnoremap <expr> <S-Tab> getcmdtype() ==# '/' ? '<C-t>' : '<C-z><C-p><C-p>'
 
+nnoremap <Space><Space> <Cmd>call <SID>highlight_cword()<CR>
+function! s:highlight_cword()
+  let query = expand('<cword>')
+  if !exists('b:dict') | let b:dict = {} | endif
+  if !has_key(b:dict, query)
+    let b:dict[query] =  matchadd('Search', $'\<{query}\>')
+  else
+    call matchdelete(b:dict[query])
+    unlet b:dict[query]
+  endif
+endfunction
+
 noremap ssi m`A "{{{<Esc>g``
 noremap sse m`A "}}}<Esc>g``
 
