@@ -13,3 +13,4 @@
 ".config/espanso/config" = "~/.config/espanso/config"
 ".config/espanso/match/base.yml" = { target = "~/.config/espanso/match/base.yml", type = "symbolic" }
 ".rgignore" = "~/.rgignore"
+".config/ripgrep/rgconfig" = "~/.config/ripgrep/rgconfig"

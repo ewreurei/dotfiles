@@ -1,0 +1,2 @@
+# Smart case, that is -S/--smart-case. -s/--case-sensitive is default, and -i/--ignore-case is also available
+--smart-case
