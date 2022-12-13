@@ -56,7 +56,7 @@ augroup FileTypeSettings
   " autocmd SourcePost * doautocmd FileTypeSettings FileType
 augroup END
 
-" Startup time
+" Startup time (via https://github.com/thinca/config/blob/master/dotfiles/dot.vim/vimrc)
 if has('vim_starting') && has('reltime')
   let g:startuptime = reltime()
   augroup vimrc-startuptime
