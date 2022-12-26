@@ -183,7 +183,6 @@ nnoremap <script> <SID>sk <C-y><SID>s
 noremap sc ~
 nnoremap srl r<C-k>
 nnoremap srr r<C-k>
-noremap s; :<C-u>q
 noremap sw :<C-u>w
  "}}}
 
