@@ -221,6 +221,8 @@ function! s:highlight_cword()
   endif
 endfunction
 
+nnoremap <Space>n :%s/<C-r><C-w>//g<Left><Left>
+
 noremap ssi m`A "{{{<Esc>g``
 noremap sse m`A "}}}<Esc>g``
 
