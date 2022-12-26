@@ -142,6 +142,11 @@ noremap ) ])
 " cnoremap <Up> <C-p>
 " cnoremap <Down> <C-n>
 
+" neutral
+cnoremap <M-n> <C-e><C-u>
+" backspace
+cnoremap <M-h> <C-h>
+
 cnoremap <expr> / getcmdtype() ==# '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() ==# '?' ? '\?' : '?'
 
