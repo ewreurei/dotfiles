@@ -225,7 +225,14 @@ function! s:highlight_cword()
   endif
 endfunction
 
-nnoremap <Space>n :%s/<C-r><C-w>//g<Left><Left>
+" nnoremap <Space>n :%s/<C-r><C-w>//g<Left><Left>
+nnoremap <Space>n :<Cmd>call <SID>replace_curword()<CR>
+function! s:replace_curword() abort
+  let from = expand('<cword>')
+  let query = '%s/' . from . '//g'
+  " call feedkeys(":\<C-u>%s/\<C-r>s//g\<Left>\<Left>")
+  call setcmdline(query, len(query)-1)
+endfunction
 
 noremap ssi m`A "{{{<Esc>g``
 noremap sse m`A "}}}<Esc>g``
