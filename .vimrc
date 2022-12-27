@@ -226,12 +226,20 @@ function! s:highlight_cword()
 endfunction
 
 " nnoremap <Space>n :%s/<C-r><C-w>//g<Left><Left>
-nnoremap <Space>n :<Cmd>call <SID>replace_curword()<CR>
+nnoremap <Space>n <Cmd>call <SID>replace_curword()<CR>
+xnoremap <Space>n <Cmd>call <SID>replace_curword()<CR>
 function! s:replace_curword() abort
-  let from = expand('<cword>')
+  let reg = @s
+  let m = mode()
+  if m ==# 'v' || m ==# 'V' || m ==# "\<C-v>"
+    normal! "sy
+    let from = @s
+  else
+    let from = expand('<cword>')
+  endif
   let query = '%s/' . from . '//g'
-  " call feedkeys(":\<C-u>%s/\<C-r>s//g\<Left>\<Left>")
-  call setcmdline(query, len(query)-1)
+  call feedkeys(":\<C-u>" . query . "\<Left>\<Left>")
+  let @s = reg
 endfunction
 
 noremap ssi m`A "{{{<Esc>g``
