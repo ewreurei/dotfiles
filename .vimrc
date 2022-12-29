@@ -347,6 +347,8 @@ command! -range BrowserBookmarkDateFormat <line1>,<line2>s;\(ADD_DATE\|LAST_MODI
 if has('win32') && executable('sakura')
   command! Sakura call system('start /min sakura ' . shellescape(@%))
 endif
+
+command! ConvertToHtmlRuby %s;{\([^|]\+\)|\([^}]\+\)};<ruby><rb>\1</rb><rt>\2</rt></ruby>;g
  "}}}
 
 "---------------------------------------
