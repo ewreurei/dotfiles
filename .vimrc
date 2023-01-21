@@ -143,9 +143,11 @@ noremap ) ])
 " cnoremap <Down> <C-n>
 
 " neutral
-cnoremap <M-n> <C-e><C-u>
+" cnoremap <M-n> <C-e><C-u>
 " backspace
 cnoremap <M-h> <C-h>
+" double tap
+cnoremap <expr> <M-n> getcmdline() ==# '' ? '<C-h>' : '<C-e><C-u>'
 
 cnoremap <expr> / getcmdtype() ==# '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() ==# '?' ? '\?' : '?'
