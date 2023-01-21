@@ -237,7 +237,12 @@ function! s:replace_curword() abort
   else
     let from = expand('<cword>')
   endif
-  let query = '%s/' . from . '//g'
+  let query = input("", '%s/' . from . "//g\<left>\<left>")
+  let [from, to] = matchstr(query, '%s/\zs.*\ze/g') ->split('/')
+  if !exists('b:replaced')
+    let b:replaced = {}
+  endif
+  let b:replaced[from] = to
   call feedkeys(":\<C-u>" . query . "\<Left>\<Left>")
   let @s = reg
 endfunction
