@@ -207,6 +207,12 @@ xnoremap K <Nop>
 nnoremap <Up> gk
 nnoremap <Down> gj
 
+" il/al text object
+xnoremap il <Cmd>normal! ^og_<CR>
+onoremap il <Cmd>normal vil<CR>
+xnoremap al <Cmd>normal! 0og_<CR>
+onoremap al <Cmd>normal val<CR>
+
 " not a good approach, see these help: `c_<Tab>`, `c_<S-Tab>`, `wc`
 " (when search tab character, use '\t')
 " cmap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<Tab>'
@@ -378,7 +384,7 @@ Jetpack 'machakann/vim-highlightedyank'
 Jetpack 'kana/vim-operator-user'
 Jetpack 'kana/vim-operator-replace'
 Jetpack 'kana/vim-textobj-user'
-Jetpack 'kana/vim-textobj-line'
+" Jetpack 'kana/vim-textobj-line'
 Jetpack 'romainl/vim-cool'
 Jetpack 'ntpeters/vim-better-whitespace'
 Jetpack 'haya14busa/vim-asterisk'
