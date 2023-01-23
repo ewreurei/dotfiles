@@ -11,6 +11,7 @@ sudo dotter deploy -d
 # deploy
 sudo dotter deploy
 ```
+
 ## or other (not tested):
 ```sh
 # before checking
@@ -18,6 +19,7 @@ dotter deploy -d
 # deploy
 dotter deploy
 ```
+
 ## or using [just]:
 ```sh
 # (some info about recipes)
