@@ -36,5 +36,11 @@ just dry
 just deploy
 ```
 
+## License
+Basically, files published under the [CC0 License][CC0]  
+But if codes have via links (in vimrc), some rights might be returned into them so maybe you have to check it  
+Anyway, feel free to steal my snippets I wrote :)  
+
 [dotter]: https://github.com/SuperCuber/dotter
 [just]: https://github.com/casey/just
+[CC0]: https://creativecommons.org/publicdomain/zero/1.0/deed
