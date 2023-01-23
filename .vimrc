@@ -213,6 +213,13 @@ onoremap il <Cmd>normal vil<CR>
 xnoremap al <Cmd>normal! 0og_<CR>
 onoremap al <Cmd>normal val<CR>
 
+" markdown list text object (iml/aml)
+" using 's as temporary mark
+xnoremap <silent> iml :<C-u>exec "normal! ms0" \| exec 'normal!' search('^\s*- .', 'ce', line('.')) ? 'vog_' : 'g`s'<CR>
+onoremap iml <Cmd>normal viml<CR>
+xnoremap <silent> aml :<C-u>exec "normal! ms0" \| exec 'normal!' search('^\s*-', 'ce', line('.')) ? 'vog_' : 'g`s'<CR>
+onoremap aml <Cmd>normal vaml<CR>
+
 " not a good approach, see these help: `c_<Tab>`, `c_<S-Tab>`, `wc`
 " (when search tab character, use '\t')
 " cmap <expr> <Tab> getcmdtype() ==# '/' ? '<C-g>' : '<Tab>'
