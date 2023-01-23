@@ -265,23 +265,6 @@ endfunction
 noremap ssi m`A "{{{<Esc>g``
 noremap sse m`A "}}}<Esc>g``
 
-" https://leafcage.hateblo.jp/entry/2013/04/24/053113
-nnoremap z[ <Cmd>call <SID>put_foldmarker(0)<CR>
-nnoremap z] <Cmd>call <SID>put_foldmarker(1)<CR>
-function! s:put_foldmarker(foldclose_p) "{{{
-  let crrstr = getline('.')
-  let padding = crrstr=='' ? '' : crrstr=~'\s$' ? '' : ' '
-  let [cms_start, cms_end] = ['', '']
-  let outside_a_comment_p = synIDattr(synID(line('.'), col('$')-1, 1), 'name') !~? 'comment'
-  if outside_a_comment_p
-    let cms_start = matchstr(&cms,'\V\s\*\zs\.\+\ze%s')
-    let cms_end = matchstr(&cms,'\V%s\zs\.\+')
-  endif
-  let fmr = split(&fmr, ',')[a:foldclose_p]. (v:count ? v:count : '')
-  exe 'norm! A'. padding. cms_start. fmr. cms_end
-endfunction
-"}}}
-
 " for specific macros
 noremap <expr> <CR> getcmdwintype() ==# '' ? '@@j' : '<CR>'
 
