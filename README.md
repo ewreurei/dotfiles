@@ -37,7 +37,7 @@ just deploy
 ```
 
 ## License
-Basically, files published under the [CC0 License][CC0]  
+Basically, files published under the [CC0 License][CC0] explicitly  
 But if codes have via links (in vimrc), some rights might be returned into them so maybe you have to check it  
 Anyway, feel free to steal my snippets I wrote :)  
 
