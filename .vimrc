@@ -297,7 +297,7 @@ command! Hoge Toggle hoge
 function! s:toggle_option(optname)
   if exists('&' .. a:optname)
     execute 'setlocal' a:optname .. '!'
-    let optstat = eval('&' .. a:optname) ? a:optname : 'no' .. a:optname
+    let optstat = '&' .. a:optname ? a:optname : 'no' .. a:optname
     echo "Now:" optstat
   else
     echohl WarningMsg | echo "Error: This option doesn't exist" | echohl None
