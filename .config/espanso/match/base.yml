@@ -41,7 +41,7 @@ matches:
     replace: "寿司食いねぇ"
 
   # Markdown link
-  - trigger: "jjmd" 
+  - trigger: "jjmd"
     replace: "[$|$]({{clipboard}})"
     vars:
       - name: "clipboard"
@@ -53,7 +53,7 @@ matches:
       - name: nowtime
         type: date
         params:
-          format: "%-H時%-M分%-S秒" 
+          format: "%-H時%-M分%-S秒"
     # Other format:
     # なう: 7時25分34秒
     # なう：7時25分34秒
