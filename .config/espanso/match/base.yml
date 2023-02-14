@@ -83,4 +83,4 @@ matches:
     replace: "testmsg: {{message}}"
 
   - trigger: ";gh"
-    replace: "https://github.com/"
+    replace: "github.com/"
