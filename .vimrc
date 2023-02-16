@@ -821,7 +821,7 @@ noremap ,sN gU
 "---------------------------------------
 " Copy-pasted from `:h everforest-usage` "{{{
 set background=dark
-let g:everforest_background = 'hard'
+let g:everforest_background = 'medium'
 let g:everforest_disable_italic_comment = 1
 
 colorscheme everforest
