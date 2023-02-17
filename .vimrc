@@ -469,13 +469,13 @@ let s:rules += [
 
 let s:rules += [
   "\   html comment
-  \   {'char': '-', 'at': '<!\%#',   'input_after': '-', 'filetype': ['html', 'markdown']},
-  \   {'char': '-', 'at': '<!-\%#',  'input_after': '-', 'filetype': ['html', 'markdown']},
-  \   {'char': ' ', 'at': '<!--\%#', 'input_after': ' ', 'filetype': ['html', 'markdown']},
-  \   {'char': '<BS>', 'at': '<!-\%#',   'delete': 1, 'filetype': ['html', 'markdown']},
-  \   {'char': '<BS>', 'at': '<!--\%#',  'delete': 1, 'filetype': ['html', 'markdown']},
-  \   {'char': '<BS>', 'at': '<!-- \%#', 'delete': 1, 'filetype': ['html', 'markdown']},
-  \   {'char': '<BS>', 'at': '<!\%#', 'input': '<BS><BS>', 'delete': 1, 'filetype': ['html', 'markdown']},
+  \   {'char': '-', 'at': '<!\%#>',     'input_after': '-', 'filetype': ['html', 'markdown']},
+  \   {'char': '-', 'at': '<!-\%#->',   'input_after': '-', 'filetype': ['html', 'markdown']},
+  \   {'char': ' ', 'at': '<!--\%#-->', 'input_after': ' ', 'filetype': ['html', 'markdown']},
+  \   {'char': '<BS>', 'at': '<!-\%#->',     'delete': 1, 'filetype': ['html', 'markdown']},
+  \   {'char': '<BS>', 'at': '<!--\%#-->',   'delete': 1, 'filetype': ['html', 'markdown']},
+  \   {'char': '<BS>', 'at': '<!-- \%# -->', 'delete': 1, 'filetype': ['html', 'markdown']},
+  \   {'char': '<BS>', 'at': '<!\%#>', 'input': '<BS><BS>', 'delete': 1, 'filetype': ['html', 'markdown']},
   \   {'char': '>', 'at': '\%# \?-->', 'leave': '>', 'filetype': ['html', 'markdown']},
   \ ]
 
