@@ -45,7 +45,7 @@ set wildoptions+=pum
 set pumheight=15
 set noshowmode
 
-set undofile
+" set undofile
 let s:undodir = expand(has('win32') ? '~/vimfiles' : '~/.vim') . '/undo'
 exec !isdirectory(s:undodir) && !filereadable(s:undodir) ? 'call mkdir(s:undodir)' : ''
 let &undodir = s:undodir
