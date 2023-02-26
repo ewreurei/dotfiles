@@ -49,6 +49,7 @@ set noshowmode
 let s:undodir = expand(has('win32') ? '~/vimfiles' : '~/.vim') . '/undo'
 exec !isdirectory(s:undodir) && !filereadable(s:undodir) ? 'call mkdir(s:undodir)' : ''
 let &undodir = s:undodir
+let &l:undofile = filereadable(undofile(@%))
 
 augroup FileTypeSettings
   autocmd!
